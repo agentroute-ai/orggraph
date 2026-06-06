@@ -7,9 +7,12 @@ Master's thesis software, MSc in Artificial Intelligence, Università della Sviz
 **Author:** Riccardo Sacco
 **Supervisor:** Prof. Lonneke van der Plas
 
+[![live demo](https://img.shields.io/badge/live%20demo-orggraph.streamlit.app-16a34a.svg)](https://orggraph.streamlit.app)
 [![tests](https://github.com/agentroute-ai/orggraph/actions/workflows/tests.yml/badge.svg)](https://github.com/agentroute-ai/orggraph/actions/workflows/tests.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![python: 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](pyproject.toml)
+
+**Live dashboard:** https://orggraph.streamlit.app
 
 ## Abstract
 
@@ -97,15 +100,19 @@ make install                       # pip install -e ".[dev]" + pre-commit hooks
 
 ## Dashboard
 
-A static Streamlit explorer of the extracted organization (communication network,
-LLM personas, project/topic clusters, pipeline overview). It reads the committed
-exports only, so it needs no database and no model endpoint:
+**Live:** https://orggraph.streamlit.app
+
+A static Streamlit explorer of the corpus and the extracted organization: corpus
+overview, communication network, LLM personas, project/topic clusters, external
+organizations, the pipeline, the RQ1/RQ2/RQ3 results, and a replayed agent demo.
+It reads the committed exports only, so it needs no database and no model endpoint.
+Run it locally with:
 
 ```bash
 make dashboard                     # pip install -e ".[dashboard]" + streamlit run dashboard/Home.py
 ```
 
-It also deploys as-is to Streamlit Community Cloud (main file `dashboard/Home.py`,
+It deploys as-is to Streamlit Community Cloud (main file `dashboard/Home.py`,
 Python 3.12); see [dashboard/README.md](dashboard/README.md).
 
 ## Reproducing results
