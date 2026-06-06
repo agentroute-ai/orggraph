@@ -36,7 +36,7 @@ restore:                                   # load the committed Neo4j export int
 	bash scripts/restore_neo4j.sh
 
 dashboard:                                 # static explorer (no live DB / LLM needed)
-	pip install -e ".[dashboard]"
+	pip install -e .
 	streamlit run dashboard/Home.py
 
 # Default reproducible pipeline: Stage 0 to Stage 9. Validation and bench are opt-in.

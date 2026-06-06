@@ -1,3 +1,7 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "orggraph"
 version = "0.1.0"
@@ -22,17 +26,18 @@ dependencies = [
     "psycopg[binary]>=3.2",
     "pgvector>=0.3",
     "python-dotenv>=1.0",
+    # Dashboard (static Streamlit explorer). Kept in the core dependencies so
+    # `uv sync` from uv.lock installs them on Streamlit Community Cloud, which
+    # does not install optional-dependency extras.
+    "streamlit>=1.39",
+    "plotly>=5.24",
+    "pyvis>=0.3.2",
 ]
 
 [project.optional-dependencies]
 dev = [
     "ruff>=0.6",
     "pre-commit>=3.5",
-]
-dashboard = [
-    "streamlit>=1.39",
-    "plotly>=5.24",
-    "pyvis>=0.3.2",
 ]
 
 [project.scripts]
@@ -69,6 +74,9 @@ orggraph-eval-kg-chat          = "orggraph.pipeline.eval.kg_chat.__main__:main"
 orggraph-eval-team-metrics     = "orggraph.pipeline.eval.kg_chat.team_metrics:main"
 orggraph-bench-llm             = "orggraph.pipeline.bench.llm:main"
 orggraph-bench-extraction      = "orggraph.pipeline.bench.email_extraction:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/orggraph"]
 
 [tool.ruff]
 line-length = 100
