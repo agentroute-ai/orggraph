@@ -1,0 +1,31 @@
+name,email,title,level,level_numeric
+Kenneth Lay,kenneth.lay@enron.com,Chairman and CEO,C-Suite,6
+Jeffrey Skilling,jeff.skilling@enron.com,President and CEO,C-Suite,6
+Andrew Fastow,andrew.fastow@enron.com,CFO,C-Suite,6
+Richard Causey,richard.causey@enron.com,CAO,C-Suite,6
+Steven Kean,steven.kean@enron.com,EVP and Chief of Staff,SVP,4
+Mark Frevert,mark.frevert@enron.com,Vice Chairman,Vice Chairman,5
+Greg Whalley,greg.whalley@enron.com,President and COO,C-Suite,6
+Mark Haedicke,mark.haedicke@enron.com,Managing Director,VP,3
+Jeff Dasovich,jeff.dasovich@enron.com,Government Relations Executive,Director,2
+Sara Shackleton,sara.shackleton@enron.com,VP and Associate General Counsel,VP,3
+Tana Jones,tana.jones@enron.com,Senior Legal Specialist,Manager,1
+Vince Kaminski,vince.kaminski@enron.com,"Managing Director, Research",VP,3
+Louise Kitchen,louise.kitchen@enron.com,"President, Enron Online",SVP,4
+John Lavorato,john.lavorato@enron.com,"CEO, Enron Americas",C-Suite,6
+David Delainey,david.delainey@enron.com,"CEO, Enron Energy Services",C-Suite,6
+James Derrick,james.derrick@enron.com,General Counsel,SVP,4
+Richard Sanders,richard.sanders@enron.com,VP and Assistant General Counsel,VP,3
+Elizabeth Sager,elizabeth.sager@enron.com,VP and Assistant General Counsel,VP,3
+Gerald Nemec,gerald.nemec@enron.com,Director,Director,2
+Chris Germany,chris.germany@enron.com,Pipeline Trading Manager,Manager,1
+Mike Grigsby,mike.grigsby@enron.com,"VP, Gas Trading",VP,3
+Scott Neal,scott.neal@enron.com,"VP, Trading",VP,3
+Barry Tycholiz,barry.tycholiz@enron.com,"VP, Gas Trading",VP,3
+Susan Scott,susan.scott@enron.com,VP,VP,3
+Kay Mann,kay.mann@enron.com,Senior Counsel,Manager,1
+Matthew Lenhart,matthew.lenhart@enron.com,Trader,Employee,0
+Phillip Love,phillip.love@enron.com,Analyst,Employee,0
+Tracy Geaccone,tracy.geaccone@enron.com,"VP, Pipeline Operations",VP,3
+Danny McCarty,danny.mccarty@enron.com,VP,VP,3
+Bill Williams,bill.williams@enron.com,Trader,Employee,0

@@ -1,0 +1,4259 @@
+{
+  "metadata": {
+    "source": "Enron Email Corpus Analysis",
+    "total_external_organizations": 425,
+    "analysis_method": "Domain analysis + communication volume + keyword detection"
+  },
+  "organizations": [
+    {
+      "domain": "govadv.com",
+      "company_name": "Govadv",
+      "category": "Government/Regulatory",
+      "relationship_type": "Regulatory Body",
+      "emails_from_enron": 3013,
+      "emails_to_enron": 15018,
+      "total_emails": 18031,
+      "direction_ratio": 0.2
+    },
+    {
+      "domain": "bracepatt.com",
+      "company_name": "Bracepatt",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 3541,
+      "emails_to_enron": 3848,
+      "total_emails": 7389,
+      "direction_ratio": 0.92
+    },
+    {
+      "domain": "txu.com",
+      "company_name": "Txu",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 117,
+      "emails_to_enron": 7229,
+      "total_emails": 7346,
+      "direction_ratio": 0.02
+    },
+    {
+      "domain": "columbiaenergygroup.com",
+      "company_name": "Columbiaenergygroup",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 1247,
+      "emails_to_enron": 3742,
+      "total_emails": 4989,
+      "direction_ratio": 0.33
+    },
+    {
+      "domain": "gmssr.com",
+      "company_name": "Gmssr",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 1400,
+      "emails_to_enron": 3499,
+      "total_emails": 4899,
+      "direction_ratio": 0.4
+    },
+    {
+      "domain": "houston.rr.com",
+      "company_name": "Houston.Rr",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 818,
+      "emails_to_enron": 2388,
+      "total_emails": 3206,
+      "direction_ratio": 0.34
+    },
+    {
+      "domain": "akllp.com",
+      "company_name": "Akllp",
+      "category": "Legal Services",
+      "relationship_type": "Legal Advisor (Supplier)",
+      "emails_from_enron": 1291,
+      "emails_to_enron": 1901,
+      "total_emails": 3192,
+      "direction_ratio": 0.68
+    },
+    {
+      "domain": "amerexenergy.com",
+      "company_name": "Amerexenergy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 133,
+      "emails_to_enron": 2995,
+      "total_emails": 3128,
+      "direction_ratio": 0.04
+    },
+    {
+      "domain": "llgm.com",
+      "company_name": "Llgm",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 2591,
+      "emails_to_enron": 472,
+      "total_emails": 3063,
+      "direction_ratio": 5.49
+    },
+    {
+      "domain": "velaw.com",
+      "company_name": "Velaw",
+      "category": "Legal Services",
+      "relationship_type": "Legal Advisor (Supplier)",
+      "emails_from_enron": 1506,
+      "emails_to_enron": 1549,
+      "total_emails": 3055,
+      "direction_ratio": 0.97
+    },
+    {
+      "domain": "brobeck.com",
+      "company_name": "Brobeck",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 1966,
+      "emails_to_enron": 1065,
+      "total_emails": 3031,
+      "direction_ratio": 1.85
+    },
+    {
+      "domain": "kslaw.com",
+      "company_name": "Kslaw",
+      "category": "Legal Services",
+      "relationship_type": "Legal Advisor (Supplier)",
+      "emails_from_enron": 2124,
+      "emails_to_enron": 778,
+      "total_emails": 2902,
+      "direction_ratio": 2.73
+    },
+    {
+      "domain": "epsa.org",
+      "company_name": "Epsa",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 99,
+      "emails_to_enron": 2730,
+      "total_emails": 2829,
+      "direction_ratio": 0.04
+    },
+    {
+      "domain": "duke-energy.com",
+      "company_name": "Duke Energy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 488,
+      "emails_to_enron": 1815,
+      "total_emails": 2303,
+      "direction_ratio": 0.27
+    },
+    {
+      "domain": "andrews-kurth.com",
+      "company_name": "Andrews Kurth",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 656,
+      "emails_to_enron": 1446,
+      "total_emails": 2102,
+      "direction_ratio": 0.45
+    },
+    {
+      "domain": "pgn.com",
+      "company_name": "Pgn",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 1374,
+      "emails_to_enron": 451,
+      "total_emails": 1825,
+      "direction_ratio": 3.05
+    },
+    {
+      "domain": "elpaso.com",
+      "company_name": "Elpaso",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 398,
+      "emails_to_enron": 1393,
+      "total_emails": 1791,
+      "direction_ratio": 0.29
+    },
+    {
+      "domain": "williams.com",
+      "company_name": "Williams",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 472,
+      "emails_to_enron": 1275,
+      "total_emails": 1747,
+      "direction_ratio": 0.37
+    },
+    {
+      "domain": "kdscommunications.com",
+      "company_name": "Kdscommunications",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 468,
+      "emails_to_enron": 1265,
+      "total_emails": 1733,
+      "direction_ratio": 0.37
+    },
+    {
+      "domain": "pge.com",
+      "company_name": "Pge",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 356,
+      "emails_to_enron": 1329,
+      "total_emails": 1685,
+      "direction_ratio": 0.27
+    },
+    {
+      "domain": "tca-us.com",
+      "company_name": "Tca Us",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 176,
+      "emails_to_enron": 1298,
+      "total_emails": 1474,
+      "direction_ratio": 0.14
+    },
+    {
+      "domain": "bpa.gov",
+      "company_name": "Bpa.Gov",
+      "category": "Government/Regulatory",
+      "relationship_type": "Regulatory Body",
+      "emails_from_enron": 607,
+      "emails_to_enron": 853,
+      "total_emails": 1460,
+      "direction_ratio": 0.71
+    },
+    {
+      "domain": "pdq.net",
+      "company_name": "Pdq",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 830,
+      "emails_to_enron": 557,
+      "total_emails": 1387,
+      "direction_ratio": 1.49
+    },
+    {
+      "domain": "compaq.com",
+      "company_name": "Compaq",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 921,
+      "emails_to_enron": 422,
+      "total_emails": 1343,
+      "direction_ratio": 2.18
+    },
+    {
+      "domain": "neg.pge.com",
+      "company_name": "Neg.Pge",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 281,
+      "emails_to_enron": 998,
+      "total_emails": 1279,
+      "direction_ratio": 0.28
+    },
+    {
+      "domain": "nymex.com",
+      "company_name": "Nymex",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 24,
+      "emails_to_enron": 1248,
+      "total_emails": 1272,
+      "direction_ratio": 0.02
+    },
+    {
+      "domain": "rice.edu",
+      "company_name": "Rice.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 983,
+      "emails_to_enron": 288,
+      "total_emails": 1271,
+      "direction_ratio": 3.41
+    },
+    {
+      "domain": "swbell.net",
+      "company_name": "Swbell",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 578,
+      "emails_to_enron": 682,
+      "total_emails": 1260,
+      "direction_ratio": 0.85
+    },
+    {
+      "domain": "hoegh.no",
+      "company_name": "Hoegh.No",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 43,
+      "emails_to_enron": 1216,
+      "total_emails": 1259,
+      "direction_ratio": 0.04
+    },
+    {
+      "domain": "reliantenergy.com",
+      "company_name": "Reliantenergy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Partner",
+      "emails_from_enron": 588,
+      "emails_to_enron": 639,
+      "total_emails": 1227,
+      "direction_ratio": 0.92
+    },
+    {
+      "domain": "iepa.com",
+      "company_name": "Iepa",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 106,
+      "emails_to_enron": 1108,
+      "total_emails": 1214,
+      "direction_ratio": 0.1
+    },
+    {
+      "domain": "erac.com",
+      "company_name": "Erac",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 1126,
+      "emails_to_enron": 39,
+      "total_emails": 1165,
+      "direction_ratio": 28.87
+    },
+    {
+      "domain": "ps.ge.com",
+      "company_name": "Ps.Ge",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 574,
+      "emails_to_enron": 559,
+      "total_emails": 1133,
+      "direction_ratio": 1.03
+    },
+    {
+      "domain": "marathon-com.com",
+      "company_name": "Marathon Com",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 1117,
+      "emails_to_enron": 10,
+      "total_emails": 1127,
+      "direction_ratio": 111.7
+    },
+    {
+      "domain": "dri-wefa.com",
+      "company_name": "Dri Wefa",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 1005,
+      "total_emails": 1005,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "home.com",
+      "company_name": "Home",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 249,
+      "emails_to_enron": 745,
+      "total_emails": 994,
+      "direction_ratio": 0.33
+    },
+    {
+      "domain": "calpine.com",
+      "company_name": "Calpine",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 292,
+      "emails_to_enron": 687,
+      "total_emails": 979,
+      "direction_ratio": 0.43
+    },
+    {
+      "domain": "bigplanet.com",
+      "company_name": "Bigplanet",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 742,
+      "emails_to_enron": 213,
+      "total_emails": 955,
+      "direction_ratio": 3.48
+    },
+    {
+      "domain": "vynpc.com",
+      "company_name": "Vynpc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 934,
+      "total_emails": 934,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "ercot.com",
+      "company_name": "Ercot",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 56,
+      "emails_to_enron": 874,
+      "total_emails": 930,
+      "direction_ratio": 0.06
+    },
+    {
+      "domain": "haas.berkeley.edu",
+      "company_name": "Haas.Berkeley.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 768,
+      "emails_to_enron": 148,
+      "total_emails": 916,
+      "direction_ratio": 5.19
+    },
+    {
+      "domain": "eott.com",
+      "company_name": "Eott",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 681,
+      "emails_to_enron": 232,
+      "total_emails": 913,
+      "direction_ratio": 2.94
+    },
+    {
+      "domain": "direcpc.com",
+      "company_name": "Direcpc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 61,
+      "emails_to_enron": 840,
+      "total_emails": 901,
+      "direction_ratio": 0.07
+    },
+    {
+      "domain": "robertmondavi.com",
+      "company_name": "Robertmondavi",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 436,
+      "emails_to_enron": 463,
+      "total_emails": 899,
+      "direction_ratio": 0.94
+    },
+    {
+      "domain": "mindspring.com",
+      "company_name": "Mindspring",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 588,
+      "emails_to_enron": 296,
+      "total_emails": 884,
+      "direction_ratio": 1.99
+    },
+    {
+      "domain": "dynegy.com",
+      "company_name": "Dynegy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 583,
+      "emails_to_enron": 287,
+      "total_emails": 870,
+      "direction_ratio": 2.03
+    },
+    {
+      "domain": "cpuc.ca.gov",
+      "company_name": "Cpuc.Ca.Gov",
+      "category": "Government/Regulatory",
+      "relationship_type": "Regulatory Body",
+      "emails_from_enron": 338,
+      "emails_to_enron": 492,
+      "total_emails": 830,
+      "direction_ratio": 0.69
+    },
+    {
+      "domain": "irjgroup.co.jp",
+      "company_name": "Irjgroup.Co.Jp",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 26,
+      "emails_to_enron": 798,
+      "total_emails": 824,
+      "direction_ratio": 0.03
+    },
+    {
+      "domain": "mcnallytemple.com",
+      "company_name": "Mcnallytemple",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 40,
+      "emails_to_enron": 779,
+      "total_emails": 819,
+      "direction_ratio": 0.05
+    },
+    {
+      "domain": "sempra.com",
+      "company_name": "Sempra",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Partner",
+      "emails_from_enron": 329,
+      "emails_to_enron": 462,
+      "total_emails": 791,
+      "direction_ratio": 0.71
+    },
+    {
+      "domain": "sullcrom.com",
+      "company_name": "Sullcrom",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 375,
+      "emails_to_enron": 414,
+      "total_emails": 789,
+      "direction_ratio": 0.91
+    },
+    {
+      "domain": "blakes.com",
+      "company_name": "Blakes",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 519,
+      "emails_to_enron": 259,
+      "total_emails": 778,
+      "direction_ratio": 2.0
+    },
+    {
+      "domain": "flash.net",
+      "company_name": "Flash",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 406,
+      "emails_to_enron": 350,
+      "total_emails": 756,
+      "direction_ratio": 1.16
+    },
+    {
+      "domain": "ccomad3.uu.commissioner.com",
+      "company_name": "Ccomad3.Uumissioner",
+      "category": "Government/Regulatory",
+      "relationship_type": "Regulatory Body",
+      "emails_from_enron": 0,
+      "emails_to_enron": 735,
+      "total_emails": 735,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "isda.org",
+      "company_name": "Isda",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 210,
+      "emails_to_enron": 515,
+      "total_emails": 725,
+      "direction_ratio": 0.41
+    },
+    {
+      "domain": "csfb.com",
+      "company_name": "Csfb",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 459,
+      "emails_to_enron": 261,
+      "total_emails": 720,
+      "direction_ratio": 1.76
+    },
+    {
+      "domain": "elektro.com.br",
+      "company_name": "Elektro.Br",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 632,
+      "emails_to_enron": 84,
+      "total_emails": 716,
+      "direction_ratio": 7.52
+    },
+    {
+      "domain": "arterhadden.com",
+      "company_name": "Arterhadden",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 85,
+      "emails_to_enron": 630,
+      "total_emails": 715,
+      "direction_ratio": 0.13
+    },
+    {
+      "domain": "duchesne.org",
+      "company_name": "Duchesne",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 17,
+      "emails_to_enron": 697,
+      "total_emails": 714,
+      "direction_ratio": 0.02
+    },
+    {
+      "domain": "msdw.com",
+      "company_name": "Msdw",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 92,
+      "emails_to_enron": 622,
+      "total_emails": 714,
+      "direction_ratio": 0.15
+    },
+    {
+      "domain": "friedwire.com",
+      "company_name": "Friedwire",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 703,
+      "total_emails": 703,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "odessapumps.com",
+      "company_name": "Odessapumps",
+      "category": "Technology",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 3,
+      "emails_to_enron": 686,
+      "total_emails": 689,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "equiva.com",
+      "company_name": "Equiva",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 666,
+      "emails_to_enron": 15,
+      "total_emails": 681,
+      "direction_ratio": 44.4
+    },
+    {
+      "domain": "juno.com",
+      "company_name": "Juno",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 405,
+      "emails_to_enron": 275,
+      "total_emails": 680,
+      "direction_ratio": 1.47
+    },
+    {
+      "domain": "skytel.com",
+      "company_name": "Skytel",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 609,
+      "emails_to_enron": 69,
+      "total_emails": 678,
+      "direction_ratio": 8.83
+    },
+    {
+      "domain": "enform.com",
+      "company_name": "Enform",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 91,
+      "emails_to_enron": 574,
+      "total_emails": 665,
+      "direction_ratio": 0.16
+    },
+    {
+      "domain": "energyattorney.com",
+      "company_name": "Energyattorney",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 17,
+      "emails_to_enron": 648,
+      "total_emails": 665,
+      "direction_ratio": 0.03
+    },
+    {
+      "domain": "eei.org",
+      "company_name": "Eei",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 94,
+      "emails_to_enron": 560,
+      "total_emails": 654,
+      "direction_ratio": 0.17
+    },
+    {
+      "domain": "accenture.com",
+      "company_name": "Accenture",
+      "category": "Consulting",
+      "relationship_type": "Consultant (Supplier)",
+      "emails_from_enron": 405,
+      "emails_to_enron": 239,
+      "total_emails": 644,
+      "direction_ratio": 1.69
+    },
+    {
+      "domain": "sce.com",
+      "company_name": "Sce",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 523,
+      "emails_to_enron": 102,
+      "total_emails": 625,
+      "direction_ratio": 5.13
+    },
+    {
+      "domain": "gibbs-bruns.com",
+      "company_name": "Gibbs Bruns",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 589,
+      "emails_to_enron": 34,
+      "total_emails": 623,
+      "direction_ratio": 17.32
+    },
+    {
+      "domain": "milbank.com",
+      "company_name": "Milbank",
+      "category": "Financial Services",
+      "relationship_type": "Financial Partner",
+      "emails_from_enron": 170,
+      "emails_to_enron": 444,
+      "total_emails": 614,
+      "direction_ratio": 0.38
+    },
+    {
+      "domain": "lhom.com",
+      "company_name": "Lhom",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 536,
+      "emails_to_enron": 72,
+      "total_emails": 608,
+      "direction_ratio": 7.44
+    },
+    {
+      "domain": "bmc.com",
+      "company_name": "Bmc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 136,
+      "emails_to_enron": 465,
+      "total_emails": 601,
+      "direction_ratio": 0.29
+    },
+    {
+      "domain": "caiso.com",
+      "company_name": "Caiso",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 103,
+      "emails_to_enron": 495,
+      "total_emails": 598,
+      "direction_ratio": 0.21
+    },
+    {
+      "domain": "rcocpa.com",
+      "company_name": "Rcocpa",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 1,
+      "emails_to_enron": 592,
+      "total_emails": 593,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "perfect.com",
+      "company_name": "Perfect",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 360,
+      "emails_to_enron": 219,
+      "total_emails": 579,
+      "direction_ratio": 1.64
+    },
+    {
+      "domain": "entergy.com",
+      "company_name": "Entergy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 143,
+      "emails_to_enron": 434,
+      "total_emails": 577,
+      "direction_ratio": 0.33
+    },
+    {
+      "domain": "frontier-economics.com",
+      "company_name": "Frontier Economics",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 184,
+      "emails_to_enron": 390,
+      "total_emails": 574,
+      "direction_ratio": 0.47
+    },
+    {
+      "domain": "mail.utexas.edu",
+      "company_name": "Mail.Utexas.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 349,
+      "emails_to_enron": 219,
+      "total_emails": 568,
+      "direction_ratio": 1.59
+    },
+    {
+      "domain": "mariner-energy.com",
+      "company_name": "Mariner Energy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 33,
+      "emails_to_enron": 517,
+      "total_emails": 550,
+      "direction_ratio": 0.06
+    },
+    {
+      "domain": "concureworkplace.com",
+      "company_name": "Concureworkplace",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 13,
+      "emails_to_enron": 531,
+      "total_emails": 544,
+      "direction_ratio": 0.02
+    },
+    {
+      "domain": "layfam.com",
+      "company_name": "Layfam",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 27,
+      "emails_to_enron": 514,
+      "total_emails": 541,
+      "direction_ratio": 0.05
+    },
+    {
+      "domain": "ae.ge.com",
+      "company_name": "Ae.Ge",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 448,
+      "emails_to_enron": 82,
+      "total_emails": 530,
+      "direction_ratio": 5.46
+    },
+    {
+      "domain": "cs.com",
+      "company_name": "Cs",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 431,
+      "emails_to_enron": 80,
+      "total_emails": 511,
+      "direction_ratio": 5.39
+    },
+    {
+      "domain": "aec.ca",
+      "company_name": "Aec.Ca",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 86,
+      "emails_to_enron": 419,
+      "total_emails": 505,
+      "direction_ratio": 0.21
+    },
+    {
+      "domain": "ss.ps.ge.com",
+      "company_name": "Ss.Ps.Ge",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 309,
+      "emails_to_enron": 188,
+      "total_emails": 497,
+      "direction_ratio": 1.64
+    },
+    {
+      "domain": "utilicorp.com",
+      "company_name": "Utilicorp",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 313,
+      "emails_to_enron": 184,
+      "total_emails": 497,
+      "direction_ratio": 1.7
+    },
+    {
+      "domain": "houston.org",
+      "company_name": "Houston",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 27,
+      "emails_to_enron": 453,
+      "total_emails": 480,
+      "direction_ratio": 0.06
+    },
+    {
+      "domain": "dttus.com",
+      "company_name": "Dttus",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 468,
+      "emails_to_enron": 6,
+      "total_emails": 474,
+      "direction_ratio": 78.0
+    },
+    {
+      "domain": "pacbell.net",
+      "company_name": "Pacbell",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 377,
+      "emails_to_enron": 92,
+      "total_emails": 469,
+      "direction_ratio": 4.1
+    },
+    {
+      "domain": "amazon.com",
+      "company_name": "Amazon",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 9,
+      "emails_to_enron": 451,
+      "total_emails": 460,
+      "direction_ratio": 0.02
+    },
+    {
+      "domain": "igservice.com",
+      "company_name": "Igservice",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 203,
+      "emails_to_enron": 252,
+      "total_emails": 455,
+      "direction_ratio": 0.81
+    },
+    {
+      "domain": "azurix.com",
+      "company_name": "Azurix",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 443,
+      "emails_to_enron": 11,
+      "total_emails": 454,
+      "direction_ratio": 40.27
+    },
+    {
+      "domain": "hollandhart.com",
+      "company_name": "Hollandhart",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 38,
+      "emails_to_enron": 410,
+      "total_emails": 448,
+      "direction_ratio": 0.09
+    },
+    {
+      "domain": "aep.com",
+      "company_name": "Aep",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Partner",
+      "emails_from_enron": 284,
+      "emails_to_enron": 159,
+      "total_emails": 443,
+      "direction_ratio": 1.79
+    },
+    {
+      "domain": "wfsg.com",
+      "company_name": "Wfsg",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 291,
+      "emails_to_enron": 149,
+      "total_emails": 440,
+      "direction_ratio": 1.95
+    },
+    {
+      "domain": "reliant.com",
+      "company_name": "Reliant",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Partner",
+      "emails_from_enron": 186,
+      "emails_to_enron": 253,
+      "total_emails": 439,
+      "direction_ratio": 0.74
+    },
+    {
+      "domain": "lehman.com",
+      "company_name": "Lehman",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 64,
+      "emails_to_enron": 371,
+      "total_emails": 435,
+      "direction_ratio": 0.17
+    },
+    {
+      "domain": "painewebber.com",
+      "company_name": "Painewebber",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 57,
+      "emails_to_enron": 376,
+      "total_emails": 433,
+      "direction_ratio": 0.15
+    },
+    {
+      "domain": "jonesday.com",
+      "company_name": "Jonesday",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 165,
+      "emails_to_enron": 268,
+      "total_emails": 433,
+      "direction_ratio": 0.62
+    },
+    {
+      "domain": "ubspainewebber.com",
+      "company_name": "Ubspainewebber",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 65,
+      "emails_to_enron": 363,
+      "total_emails": 428,
+      "direction_ratio": 0.18
+    },
+    {
+      "domain": "kindermorgan.com",
+      "company_name": "Kindermorgan",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 136,
+      "emails_to_enron": 284,
+      "total_emails": 420,
+      "direction_ratio": 0.48
+    },
+    {
+      "domain": "motleyfool.com",
+      "company_name": "Motleyfool",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 417,
+      "total_emails": 417,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "cfisd.net",
+      "company_name": "Cfisd",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 408,
+      "emails_to_enron": 6,
+      "total_emails": 414,
+      "direction_ratio": 68.0
+    },
+    {
+      "domain": "sarofim.com",
+      "company_name": "Sarofim",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 385,
+      "emails_to_enron": 29,
+      "total_emails": 414,
+      "direction_ratio": 13.28
+    },
+    {
+      "domain": "academicplanet.com",
+      "company_name": "Academicplanet",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 3,
+      "emails_to_enron": 410,
+      "total_emails": 413,
+      "direction_ratio": 0.01
+    },
+    {
+      "domain": "ac.com",
+      "company_name": "Ac",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 401,
+      "emails_to_enron": 6,
+      "total_emails": 407,
+      "direction_ratio": 66.83
+    },
+    {
+      "domain": "wt.net",
+      "company_name": "Wt",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 66,
+      "emails_to_enron": 340,
+      "total_emails": 406,
+      "direction_ratio": 0.19
+    },
+    {
+      "domain": "neosoft.com",
+      "company_name": "Neosoft",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 31,
+      "emails_to_enron": 374,
+      "total_emails": 405,
+      "direction_ratio": 0.08
+    },
+    {
+      "domain": "travelpark.com",
+      "company_name": "Travelpark",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 282,
+      "emails_to_enron": 120,
+      "total_emails": 402,
+      "direction_ratio": 2.35
+    },
+    {
+      "domain": "gpc.ca",
+      "company_name": "Gpc.Ca",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 70,
+      "emails_to_enron": 324,
+      "total_emails": 394,
+      "direction_ratio": 0.22
+    },
+    {
+      "domain": "socalgas.com",
+      "company_name": "Socalgas",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Partner",
+      "emails_from_enron": 211,
+      "emails_to_enron": 179,
+      "total_emails": 390,
+      "direction_ratio": 1.18
+    },
+    {
+      "domain": "baylor.edu",
+      "company_name": "Baylor.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 116,
+      "emails_to_enron": 271,
+      "total_emails": 387,
+      "direction_ratio": 0.43
+    },
+    {
+      "domain": "luntz.com",
+      "company_name": "Luntz",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 338,
+      "emails_to_enron": 48,
+      "total_emails": 386,
+      "direction_ratio": 7.04
+    },
+    {
+      "domain": "deloitte.com",
+      "company_name": "Deloitte",
+      "category": "Consulting",
+      "relationship_type": "Consultant (Supplier)",
+      "emails_from_enron": 263,
+      "emails_to_enron": 122,
+      "total_emails": 385,
+      "direction_ratio": 2.16
+    },
+    {
+      "domain": "cisco.com",
+      "company_name": "Cisco",
+      "category": "Technology",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 326,
+      "emails_to_enron": 58,
+      "total_emails": 384,
+      "direction_ratio": 5.62
+    },
+    {
+      "domain": "wharton.upenn.edu",
+      "company_name": "Wharton.Upenn.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 216,
+      "emails_to_enron": 167,
+      "total_emails": 383,
+      "direction_ratio": 1.29
+    },
+    {
+      "domain": "cwt.com",
+      "company_name": "Cwt",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 171,
+      "emails_to_enron": 208,
+      "total_emails": 379,
+      "direction_ratio": 0.82
+    },
+    {
+      "domain": "periwinklefoundation.org",
+      "company_name": "Periwinklefoundation",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 8,
+      "emails_to_enron": 364,
+      "total_emails": 372,
+      "direction_ratio": 0.02
+    },
+    {
+      "domain": "apex2000.net",
+      "company_name": "Apex2000",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 159,
+      "emails_to_enron": 212,
+      "total_emails": 371,
+      "direction_ratio": 0.75
+    },
+    {
+      "domain": "bp.com",
+      "company_name": "Bp",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 125,
+      "emails_to_enron": 244,
+      "total_emails": 369,
+      "direction_ratio": 0.51
+    },
+    {
+      "domain": "nytimes.com",
+      "company_name": "Nytimes",
+      "category": "News/Media",
+      "relationship_type": "Media Contact",
+      "emails_from_enron": 6,
+      "emails_to_enron": 358,
+      "total_emails": 364,
+      "direction_ratio": 0.02
+    },
+    {
+      "domain": "ubsw.com",
+      "company_name": "Ubsw",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 81,
+      "emails_to_enron": 280,
+      "total_emails": 361,
+      "direction_ratio": 0.29
+    },
+    {
+      "domain": "ix.netcom.com",
+      "company_name": "Ixcom",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 81,
+      "emails_to_enron": 279,
+      "total_emails": 360,
+      "direction_ratio": 0.29
+    },
+    {
+      "domain": "nepco.com",
+      "company_name": "Nepco",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 301,
+      "emails_to_enron": 57,
+      "total_emails": 358,
+      "direction_ratio": 5.28
+    },
+    {
+      "domain": "mirant.com",
+      "company_name": "Mirant",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Partner",
+      "emails_from_enron": 221,
+      "emails_to_enron": 127,
+      "total_emails": 348,
+      "direction_ratio": 1.74
+    },
+    {
+      "domain": "keyspanenergy.com",
+      "company_name": "Keyspanenergy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 23,
+      "emails_to_enron": 324,
+      "total_emails": 347,
+      "direction_ratio": 0.07
+    },
+    {
+      "domain": "corealty.com",
+      "company_name": "Corealty",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 333,
+      "emails_to_enron": 14,
+      "total_emails": 347,
+      "direction_ratio": 23.79
+    },
+    {
+      "domain": "industrialinfo.com",
+      "company_name": "Industrialinfo",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 1,
+      "emails_to_enron": 345,
+      "total_emails": 346,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "hq3.em5.tami",
+      "company_name": "Hq3.Em5.Tami",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 3,
+      "emails_to_enron": 342,
+      "total_emails": 345,
+      "direction_ratio": 0.01
+    },
+    {
+      "domain": "ev1.net",
+      "company_name": "Ev1",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 236,
+      "emails_to_enron": 104,
+      "total_emails": 340,
+      "direction_ratio": 2.27
+    },
+    {
+      "domain": "citicorp.com",
+      "company_name": "Citicorp",
+      "category": "Financial Services",
+      "relationship_type": "Financial Partner",
+      "emails_from_enron": 314,
+      "emails_to_enron": 22,
+      "total_emails": 336,
+      "direction_ratio": 14.27
+    },
+    {
+      "domain": "bakerbotts.com",
+      "company_name": "Bakerbotts",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 251,
+      "emails_to_enron": 83,
+      "total_emails": 334,
+      "direction_ratio": 3.02
+    },
+    {
+      "domain": "mallia.com",
+      "company_name": "Mallia",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 22,
+      "emails_to_enron": 311,
+      "total_emails": 333,
+      "direction_ratio": 0.07
+    },
+    {
+      "domain": "stoel.com",
+      "company_name": "Stoel",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 198,
+      "emails_to_enron": 135,
+      "total_emails": 333,
+      "direction_ratio": 1.47
+    },
+    {
+      "domain": "epenergy.com",
+      "company_name": "Epenergy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 279,
+      "emails_to_enron": 53,
+      "total_emails": 332,
+      "direction_ratio": 5.26
+    },
+    {
+      "domain": "kilstock.com",
+      "company_name": "Kilstock",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 172,
+      "emails_to_enron": 158,
+      "total_emails": 330,
+      "direction_ratio": 1.09
+    },
+    {
+      "domain": "mckinsey.com",
+      "company_name": "Mckinsey",
+      "category": "Consulting",
+      "relationship_type": "Consultant (Supplier)",
+      "emails_from_enron": 194,
+      "emails_to_enron": 132,
+      "total_emails": 326,
+      "direction_ratio": 1.47
+    },
+    {
+      "domain": "cinergy.com",
+      "company_name": "Cinergy",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 246,
+      "emails_to_enron": 77,
+      "total_emails": 323,
+      "direction_ratio": 3.19
+    },
+    {
+      "domain": "dow.com",
+      "company_name": "Dow",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 266,
+      "emails_to_enron": 56,
+      "total_emails": 322,
+      "direction_ratio": 4.75
+    },
+    {
+      "domain": "chase.com",
+      "company_name": "Chase",
+      "category": "Financial Services",
+      "relationship_type": "Financial Partner",
+      "emails_from_enron": 190,
+      "emails_to_enron": 131,
+      "total_emails": 321,
+      "direction_ratio": 1.45
+    },
+    {
+      "domain": "pecorp.com",
+      "company_name": "Pecorp",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 173,
+      "emails_to_enron": 145,
+      "total_emails": 318,
+      "direction_ratio": 1.19
+    },
+    {
+      "domain": "lockeliddell.com",
+      "company_name": "Lockeliddell",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 81,
+      "emails_to_enron": 231,
+      "total_emails": 312,
+      "direction_ratio": 0.35
+    },
+    {
+      "domain": "uswest.net",
+      "company_name": "Uswest",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 243,
+      "emails_to_enron": 69,
+      "total_emails": 312,
+      "direction_ratio": 3.52
+    },
+    {
+      "domain": "weil.com",
+      "company_name": "Weil",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 101,
+      "emails_to_enron": 209,
+      "total_emails": 310,
+      "direction_ratio": 0.48
+    },
+    {
+      "domain": "gs.com",
+      "company_name": "Gs",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 157,
+      "emails_to_enron": 149,
+      "total_emails": 306,
+      "direction_ratio": 1.05
+    },
+    {
+      "domain": "compuserve.com",
+      "company_name": "Compuserve",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 173,
+      "emails_to_enron": 133,
+      "total_emails": 306,
+      "direction_ratio": 1.3
+    },
+    {
+      "domain": "sterlingmccalltoyota.com",
+      "company_name": "Sterlingmccalltoyota",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 49,
+      "emails_to_enron": 256,
+      "total_emails": 305,
+      "direction_ratio": 0.19
+    },
+    {
+      "domain": "paulhastings.com",
+      "company_name": "Paulhastings",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 176,
+      "emails_to_enron": 128,
+      "total_emails": 304,
+      "direction_ratio": 1.38
+    },
+    {
+      "domain": "ns.net",
+      "company_name": "Ns",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 38,
+      "emails_to_enron": 266,
+      "total_emails": 304,
+      "direction_ratio": 0.14
+    },
+    {
+      "domain": "halliburton.com",
+      "company_name": "Halliburton",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 224,
+      "emails_to_enron": 75,
+      "total_emails": 299,
+      "direction_ratio": 2.99
+    },
+    {
+      "domain": "lists.qgadc.com",
+      "company_name": "Lists.Qgadc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 5,
+      "emails_to_enron": 291,
+      "total_emails": 296,
+      "direction_ratio": 0.02
+    },
+    {
+      "domain": "gtlaw.com",
+      "company_name": "Gtlaw",
+      "category": "Legal Services",
+      "relationship_type": "Legal Advisor (Supplier)",
+      "emails_from_enron": 111,
+      "emails_to_enron": 184,
+      "total_emails": 295,
+      "direction_ratio": 0.6
+    },
+    {
+      "domain": "uclink4.berkeley.edu",
+      "company_name": "Uclink4.Berkeley.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 175,
+      "emails_to_enron": 116,
+      "total_emails": 291,
+      "direction_ratio": 1.51
+    },
+    {
+      "domain": "caminus.com",
+      "company_name": "Caminus",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 20,
+      "emails_to_enron": 269,
+      "total_emails": 289,
+      "direction_ratio": 0.07
+    },
+    {
+      "domain": "piperrudnick.com",
+      "company_name": "Piperrudnick",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 139,
+      "emails_to_enron": 148,
+      "total_emails": 287,
+      "direction_ratio": 0.94
+    },
+    {
+      "domain": "pagenetmessage.net",
+      "company_name": "Pagenetmessage",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 279,
+      "emails_to_enron": 8,
+      "total_emails": 287,
+      "direction_ratio": 34.88
+    },
+    {
+      "domain": "ensr.com",
+      "company_name": "Ensr",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 91,
+      "emails_to_enron": 193,
+      "total_emails": 284,
+      "direction_ratio": 0.47
+    },
+    {
+      "domain": "orbitworld.net",
+      "company_name": "Orbitworld",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 130,
+      "emails_to_enron": 154,
+      "total_emails": 284,
+      "direction_ratio": 0.84
+    },
+    {
+      "domain": "austin.rr.com",
+      "company_name": "Austin.Rr",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 219,
+      "emails_to_enron": 64,
+      "total_emails": 283,
+      "direction_ratio": 3.42
+    },
+    {
+      "domain": "schwab.com",
+      "company_name": "Schwab",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 14,
+      "emails_to_enron": 268,
+      "total_emails": 282,
+      "direction_ratio": 0.05
+    },
+    {
+      "domain": "newpower.com",
+      "company_name": "Newpower",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 248,
+      "emails_to_enron": 34,
+      "total_emails": 282,
+      "direction_ratio": 7.29
+    },
+    {
+      "domain": "susmangodfrey.com",
+      "company_name": "Susmangodfrey",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 151,
+      "emails_to_enron": 131,
+      "total_emails": 282,
+      "direction_ratio": 1.15
+    },
+    {
+      "domain": "luce.com",
+      "company_name": "Luce",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 52,
+      "emails_to_enron": 229,
+      "total_emails": 281,
+      "direction_ratio": 0.23
+    },
+    {
+      "domain": "halff.com",
+      "company_name": "Halff",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 4,
+      "emails_to_enron": 277,
+      "total_emails": 281,
+      "direction_ratio": 0.01
+    },
+    {
+      "domain": "quinngillespie.com",
+      "company_name": "Quinngillespie",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 262,
+      "emails_to_enron": 19,
+      "total_emails": 281,
+      "direction_ratio": 13.79
+    },
+    {
+      "domain": "cadvision.com",
+      "company_name": "Cadvision",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 17,
+      "emails_to_enron": 263,
+      "total_emails": 280,
+      "direction_ratio": 0.06
+    },
+    {
+      "domain": "rigzone.com",
+      "company_name": "Rigzone",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 277,
+      "total_emails": 277,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "saltgrass.com",
+      "company_name": "Saltgrass",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 66,
+      "emails_to_enron": 210,
+      "total_emails": 276,
+      "direction_ratio": 0.31
+    },
+    {
+      "domain": "venturewire.com",
+      "company_name": "Venturewire",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 275,
+      "total_emails": 275,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "lemle.com",
+      "company_name": "Lemle",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 24,
+      "emails_to_enron": 249,
+      "total_emails": 273,
+      "direction_ratio": 0.1
+    },
+    {
+      "domain": "us.abb.com",
+      "company_name": "Us.Abb",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 169,
+      "emails_to_enron": 103,
+      "total_emails": 272,
+      "direction_ratio": 1.64
+    },
+    {
+      "domain": "watsonwyatt.com",
+      "company_name": "Watsonwyatt",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 147,
+      "emails_to_enron": 125,
+      "total_emails": 272,
+      "direction_ratio": 1.18
+    },
+    {
+      "domain": "stanford.edu",
+      "company_name": "Stanford.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 143,
+      "emails_to_enron": 127,
+      "total_emails": 270,
+      "direction_ratio": 1.13
+    },
+    {
+      "domain": "uniteddc.com",
+      "company_name": "Uniteddc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 266,
+      "emails_to_enron": 3,
+      "total_emails": 269,
+      "direction_ratio": 88.67
+    },
+    {
+      "domain": "whwg.com",
+      "company_name": "Whwg",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 124,
+      "emails_to_enron": 143,
+      "total_emails": 267,
+      "direction_ratio": 0.87
+    },
+    {
+      "domain": "columbiaenergy.com",
+      "company_name": "Columbiaenergy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 267,
+      "emails_to_enron": 0,
+      "total_emails": 267,
+      "direction_ratio": 267.0
+    },
+    {
+      "domain": "s-k-w.com",
+      "company_name": "S K W",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 145,
+      "emails_to_enron": 121,
+      "total_emails": 266,
+      "direction_ratio": 1.2
+    },
+    {
+      "domain": "pmaconference.com",
+      "company_name": "Pmaconference",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 263,
+      "total_emails": 263,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "thomasnelson.com",
+      "company_name": "Thomasnelson",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 257,
+      "total_emails": 257,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "stpaulshouston.org",
+      "company_name": "Stpaulshouston",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 254,
+      "total_emails": 254,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "reply.pm0.net",
+      "company_name": "Reply.Pm0",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 3,
+      "emails_to_enron": 249,
+      "total_emails": 252,
+      "direction_ratio": 0.01
+    },
+    {
+      "domain": "quinnemanuel.com",
+      "company_name": "Quinnemanuel",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 111,
+      "emails_to_enron": 138,
+      "total_emails": 249,
+      "direction_ratio": 0.8
+    },
+    {
+      "domain": "smithandkempton.com",
+      "company_name": "Smithandkempton",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 43,
+      "emails_to_enron": 204,
+      "total_emails": 247,
+      "direction_ratio": 0.21
+    },
+    {
+      "domain": "downtowndistrict.org",
+      "company_name": "Downtowndistrict",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 4,
+      "emails_to_enron": 240,
+      "total_emails": 244,
+      "direction_ratio": 0.02
+    },
+    {
+      "domain": "gbmdc.com",
+      "company_name": "Gbmdc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 207,
+      "emails_to_enron": 36,
+      "total_emails": 243,
+      "direction_ratio": 5.75
+    },
+    {
+      "domain": "aelaw.com",
+      "company_name": "Aelaw",
+      "category": "Legal Services",
+      "relationship_type": "Legal Advisor (Supplier)",
+      "emails_from_enron": 135,
+      "emails_to_enron": 107,
+      "total_emails": 242,
+      "direction_ratio": 1.26
+    },
+    {
+      "domain": "nisource.com",
+      "company_name": "Nisource",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 25,
+      "emails_to_enron": 216,
+      "total_emails": 241,
+      "direction_ratio": 0.12
+    },
+    {
+      "domain": "coair.com",
+      "company_name": "Coair",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 142,
+      "emails_to_enron": 99,
+      "total_emails": 241,
+      "direction_ratio": 1.43
+    },
+    {
+      "domain": "pkns.com",
+      "company_name": "Pkns",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 130,
+      "emails_to_enron": 111,
+      "total_emails": 241,
+      "direction_ratio": 1.17
+    },
+    {
+      "domain": "dwt.com",
+      "company_name": "Dwt",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 145,
+      "emails_to_enron": 94,
+      "total_emails": 239,
+      "direction_ratio": 1.54
+    },
+    {
+      "domain": "idealease.com",
+      "company_name": "Idealease",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 238,
+      "total_emails": 238,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "beaconelectric.com",
+      "company_name": "Beaconelectric",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 223,
+      "emails_to_enron": 12,
+      "total_emails": 235,
+      "direction_ratio": 18.58
+    },
+    {
+      "domain": "sithe.com",
+      "company_name": "Sithe",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 227,
+      "emails_to_enron": 8,
+      "total_emails": 235,
+      "direction_ratio": 28.38
+    },
+    {
+      "domain": "coral-energy.com",
+      "company_name": "Coral Energy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 192,
+      "emails_to_enron": 39,
+      "total_emails": 231,
+      "direction_ratio": 4.92
+    },
+    {
+      "domain": "pct-inc.com",
+      "company_name": "Pct Inc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 22,
+      "emails_to_enron": 208,
+      "total_emails": 230,
+      "direction_ratio": 0.11
+    },
+    {
+      "domain": "skadden.com",
+      "company_name": "Skadden",
+      "category": "Legal Services",
+      "relationship_type": "Legal Advisor (Supplier)",
+      "emails_from_enron": 170,
+      "emails_to_enron": 60,
+      "total_emails": 230,
+      "direction_ratio": 2.83
+    },
+    {
+      "domain": "erols.com",
+      "company_name": "Erols",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 143,
+      "emails_to_enron": 86,
+      "total_emails": 229,
+      "direction_ratio": 1.66
+    },
+    {
+      "domain": "czn.com",
+      "company_name": "Czn",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 90,
+      "emails_to_enron": 138,
+      "total_emails": 228,
+      "direction_ratio": 0.65
+    },
+    {
+      "domain": "winstead.com",
+      "company_name": "Winstead",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 4,
+      "emails_to_enron": 223,
+      "total_emails": 227,
+      "direction_ratio": 0.02
+    },
+    {
+      "domain": "ferc.fed.us",
+      "company_name": "Ferc.Fed.Us",
+      "category": "Government/Regulatory",
+      "relationship_type": "Regulatory Body",
+      "emails_from_enron": 172,
+      "emails_to_enron": 53,
+      "total_emails": 225,
+      "direction_ratio": 3.25
+    },
+    {
+      "domain": "kpmg.com",
+      "company_name": "Kpmg",
+      "category": "Consulting",
+      "relationship_type": "Consultant (Supplier)",
+      "emails_from_enron": 29,
+      "emails_to_enron": 194,
+      "total_emails": 223,
+      "direction_ratio": 0.15
+    },
+    {
+      "domain": "netzero.net",
+      "company_name": "Netzero",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 209,
+      "emails_to_enron": 14,
+      "total_emails": 223,
+      "direction_ratio": 14.93
+    },
+    {
+      "domain": "greenmountain.com",
+      "company_name": "Greenmountain",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 82,
+      "emails_to_enron": 140,
+      "total_emails": 222,
+      "direction_ratio": 0.59
+    },
+    {
+      "domain": "copn.com",
+      "company_name": "Copn",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 9,
+      "emails_to_enron": 212,
+      "total_emails": 221,
+      "direction_ratio": 0.04
+    },
+    {
+      "domain": "bus.utexas.edu",
+      "company_name": "Bus.Utexas.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 131,
+      "emails_to_enron": 88,
+      "total_emails": 219,
+      "direction_ratio": 1.49
+    },
+    {
+      "domain": "turn.org",
+      "company_name": "Turn",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 93,
+      "emails_to_enron": 125,
+      "total_emails": 218,
+      "direction_ratio": 0.74
+    },
+    {
+      "domain": "cmta.net",
+      "company_name": "Cmta",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 158,
+      "emails_to_enron": 59,
+      "total_emails": 217,
+      "direction_ratio": 2.68
+    },
+    {
+      "domain": "basf-corp.com",
+      "company_name": "Basf Corp",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 201,
+      "emails_to_enron": 13,
+      "total_emails": 214,
+      "direction_ratio": 15.46
+    },
+    {
+      "domain": "carpentersnodgrass.com",
+      "company_name": "Carpentersnodgrass",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 214,
+      "total_emails": 214,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "datek.com",
+      "company_name": "Datek",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 214,
+      "total_emails": 214,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "tupac.com",
+      "company_name": "Tupac",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 213,
+      "emails_to_enron": 0,
+      "total_emails": 213,
+      "direction_ratio": 213.0
+    },
+    {
+      "domain": "aga.org",
+      "company_name": "Aga",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 1,
+      "emails_to_enron": 212,
+      "total_emails": 213,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "alltel.net",
+      "company_name": "Alltel",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 80,
+      "emails_to_enron": 132,
+      "total_emails": 212,
+      "direction_ratio": 0.61
+    },
+    {
+      "domain": "us.andersen.com",
+      "company_name": "Us.Andersen",
+      "category": "Consulting",
+      "relationship_type": "Consultant (Supplier)",
+      "emails_from_enron": 47,
+      "emails_to_enron": 164,
+      "total_emails": 211,
+      "direction_ratio": 0.29
+    },
+    {
+      "domain": "fctg.com",
+      "company_name": "Fctg",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 184,
+      "emails_to_enron": 26,
+      "total_emails": 210,
+      "direction_ratio": 7.08
+    },
+    {
+      "domain": "br-inc.com",
+      "company_name": "Br Inc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 108,
+      "emails_to_enron": 102,
+      "total_emails": 210,
+      "direction_ratio": 1.06
+    },
+    {
+      "domain": "msl.redstone.army.mil",
+      "company_name": "Msl.Redstone.Army.Mil",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 193,
+      "emails_to_enron": 14,
+      "total_emails": 207,
+      "direction_ratio": 13.79
+    },
+    {
+      "domain": "ipgdirect.com",
+      "company_name": "Ipgdirect",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 6,
+      "emails_to_enron": 200,
+      "total_emails": 206,
+      "direction_ratio": 0.03
+    },
+    {
+      "domain": "cleanpower.org",
+      "company_name": "Cleanpower",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 172,
+      "emails_to_enron": 34,
+      "total_emails": 206,
+      "direction_ratio": 5.06
+    },
+    {
+      "domain": "nypa.gov",
+      "company_name": "Nypa.Gov",
+      "category": "Government/Regulatory",
+      "relationship_type": "Regulatory Body",
+      "emails_from_enron": 18,
+      "emails_to_enron": 185,
+      "total_emails": 203,
+      "direction_ratio": 0.1
+    },
+    {
+      "domain": "puget.com",
+      "company_name": "Puget",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 94,
+      "emails_to_enron": 107,
+      "total_emails": 201,
+      "direction_ratio": 0.88
+    },
+    {
+      "domain": "sablaw.com",
+      "company_name": "Sablaw",
+      "category": "Legal Services",
+      "relationship_type": "Legal Advisor (Supplier)",
+      "emails_from_enron": 195,
+      "emails_to_enron": 6,
+      "total_emails": 201,
+      "direction_ratio": 32.5
+    },
+    {
+      "domain": "uh.edu",
+      "company_name": "Uh.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 121,
+      "emails_to_enron": 79,
+      "total_emails": 200,
+      "direction_ratio": 1.53
+    },
+    {
+      "domain": "travisintl.com",
+      "company_name": "Travisintl",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 6,
+      "emails_to_enron": 193,
+      "total_emails": 199,
+      "direction_ratio": 0.03
+    },
+    {
+      "domain": "brunini.com",
+      "company_name": "Brunini",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 139,
+      "emails_to_enron": 60,
+      "total_emails": 199,
+      "direction_ratio": 2.32
+    },
+    {
+      "domain": "apsc.com",
+      "company_name": "Apsc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 10,
+      "emails_to_enron": 187,
+      "total_emails": 197,
+      "direction_ratio": 0.05
+    },
+    {
+      "domain": "avistaenergy.com",
+      "company_name": "Avistaenergy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 31,
+      "emails_to_enron": 166,
+      "total_emails": 197,
+      "direction_ratio": 0.19
+    },
+    {
+      "domain": "aesc.com",
+      "company_name": "Aesc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 67,
+      "emails_to_enron": 128,
+      "total_emails": 195,
+      "direction_ratio": 0.52
+    },
+    {
+      "domain": "freshfields.com",
+      "company_name": "Freshfields",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 116,
+      "emails_to_enron": 79,
+      "total_emails": 195,
+      "direction_ratio": 1.47
+    },
+    {
+      "domain": "arpartners.com",
+      "company_name": "Arpartners",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 135,
+      "emails_to_enron": 60,
+      "total_emails": 195,
+      "direction_ratio": 2.25
+    },
+    {
+      "domain": "us.pwcglobal.com",
+      "company_name": "Us.Pwcglobal",
+      "category": "Consulting",
+      "relationship_type": "Consultant (Supplier)",
+      "emails_from_enron": 126,
+      "emails_to_enron": 68,
+      "total_emails": 194,
+      "direction_ratio": 1.85
+    },
+    {
+      "domain": "prebon.nl",
+      "company_name": "Prebon.Nl",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 194,
+      "total_emails": 194,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "lists.postmastergeneral.com",
+      "company_name": "Lists.Postmastergeneral",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 193,
+      "total_emails": 193,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "nyiso.com",
+      "company_name": "Nyiso",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 26,
+      "emails_to_enron": 166,
+      "total_emails": 192,
+      "direction_ratio": 0.16
+    },
+    {
+      "domain": "kvaerner.com",
+      "company_name": "Kvaerner",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 34,
+      "emails_to_enron": 157,
+      "total_emails": 191,
+      "direction_ratio": 0.22
+    },
+    {
+      "domain": "dom.com",
+      "company_name": "Dom",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 131,
+      "emails_to_enron": 60,
+      "total_emails": 191,
+      "direction_ratio": 2.18
+    },
+    {
+      "domain": "ch2m.com",
+      "company_name": "Ch2M",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 164,
+      "emails_to_enron": 26,
+      "total_emails": 190,
+      "direction_ratio": 6.31
+    },
+    {
+      "domain": "exchange.ml.com",
+      "company_name": "Exchange.Ml",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 108,
+      "emails_to_enron": 82,
+      "total_emails": 190,
+      "direction_ratio": 1.32
+    },
+    {
+      "domain": "bigfoot.com",
+      "company_name": "Bigfoot",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 138,
+      "emails_to_enron": 52,
+      "total_emails": 190,
+      "direction_ratio": 2.65
+    },
+    {
+      "domain": "globalp.com",
+      "company_name": "Globalp",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 177,
+      "emails_to_enron": 12,
+      "total_emails": 189,
+      "direction_ratio": 14.75
+    },
+    {
+      "domain": "concentric.net",
+      "company_name": "Concentric",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 52,
+      "emails_to_enron": 136,
+      "total_emails": 188,
+      "direction_ratio": 0.38
+    },
+    {
+      "domain": "swlaw.com",
+      "company_name": "Swlaw",
+      "category": "Legal Services",
+      "relationship_type": "Legal Advisor (Supplier)",
+      "emails_from_enron": 23,
+      "emails_to_enron": 165,
+      "total_emails": 188,
+      "direction_ratio": 0.14
+    },
+    {
+      "domain": "rmi.net",
+      "company_name": "Rmi",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 179,
+      "emails_to_enron": 8,
+      "total_emails": 187,
+      "direction_ratio": 22.38
+    },
+    {
+      "domain": "travelocity.m0.net",
+      "company_name": "Travelocity.M0",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 187,
+      "total_emails": 187,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "ghg.net",
+      "company_name": "Ghg",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 185,
+      "emails_to_enron": 1,
+      "total_emails": 186,
+      "direction_ratio": 185.0
+    },
+    {
+      "domain": "viviance.com",
+      "company_name": "Viviance",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 147,
+      "emails_to_enron": 37,
+      "total_emails": 184,
+      "direction_ratio": 3.97
+    },
+    {
+      "domain": "zdnetonebox.com",
+      "company_name": "Zdnetonebox",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 119,
+      "emails_to_enron": 65,
+      "total_emails": 184,
+      "direction_ratio": 1.83
+    },
+    {
+      "domain": "mediaone.net",
+      "company_name": "Mediaone",
+      "category": "News/Media",
+      "relationship_type": "Media Contact",
+      "emails_from_enron": 118,
+      "emails_to_enron": 65,
+      "total_emails": 183,
+      "direction_ratio": 1.82
+    },
+    {
+      "domain": "michaelrosenfeldart.com",
+      "company_name": "Michaelrosenfeldart",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 2,
+      "emails_to_enron": 181,
+      "total_emails": 183,
+      "direction_ratio": 0.01
+    },
+    {
+      "domain": "crossborderenergy.com",
+      "company_name": "Crossborderenergy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 58,
+      "emails_to_enron": 120,
+      "total_emails": 178,
+      "direction_ratio": 0.48
+    },
+    {
+      "domain": "t-online.de",
+      "company_name": "T Online.De",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 43,
+      "emails_to_enron": 134,
+      "total_emails": 177,
+      "direction_ratio": 0.32
+    },
+    {
+      "domain": "lacima.co.uk",
+      "company_name": "Lacima.Co.Uk",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 75,
+      "emails_to_enron": 100,
+      "total_emails": 175,
+      "direction_ratio": 0.75
+    },
+    {
+      "domain": "howard.edu",
+      "company_name": "Howard.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 174,
+      "total_emails": 174,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "eds.com",
+      "company_name": "Eds",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 144,
+      "emails_to_enron": 29,
+      "total_emails": 173,
+      "direction_ratio": 4.97
+    },
+    {
+      "domain": "us.arthurandersen.com",
+      "company_name": "Us.Arthurandersen",
+      "category": "Consulting",
+      "relationship_type": "Consultant (Supplier)",
+      "emails_from_enron": 125,
+      "emails_to_enron": 46,
+      "total_emails": 171,
+      "direction_ratio": 2.72
+    },
+    {
+      "domain": "coair.rsc01.com",
+      "company_name": "Coair.Rsc01",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 171,
+      "total_emails": 171,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "us.ibm.com",
+      "company_name": "Us.Ibm",
+      "category": "Technology",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 154,
+      "emails_to_enron": 16,
+      "total_emails": 170,
+      "direction_ratio": 9.62
+    },
+    {
+      "domain": "nbchamber.com",
+      "company_name": "Nbchamber",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 169,
+      "total_emails": 169,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "bankofamerica.com",
+      "company_name": "Bankofamerica",
+      "category": "Financial Services",
+      "relationship_type": "Financial Partner",
+      "emails_from_enron": 118,
+      "emails_to_enron": 50,
+      "total_emails": 168,
+      "direction_ratio": 2.36
+    },
+    {
+      "domain": "streeter.com.hk",
+      "company_name": "Streeter.Hk",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 1,
+      "emails_to_enron": 167,
+      "total_emails": 168,
+      "direction_ratio": 0.01
+    },
+    {
+      "domain": "a-klaw.com",
+      "company_name": "A Klaw",
+      "category": "Legal Services",
+      "relationship_type": "Legal Advisor (Supplier)",
+      "emails_from_enron": 109,
+      "emails_to_enron": 58,
+      "total_emails": 167,
+      "direction_ratio": 1.88
+    },
+    {
+      "domain": "ust.hk",
+      "company_name": "Ust.Hk",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 167,
+      "total_emails": 167,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "testmail.ercot.com",
+      "company_name": "Testmail.Ercot",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 1,
+      "emails_to_enron": 165,
+      "total_emails": 166,
+      "direction_ratio": 0.01
+    },
+    {
+      "domain": "wrightlaw.com",
+      "company_name": "Wrightlaw",
+      "category": "Legal Services",
+      "relationship_type": "Legal Advisor (Supplier)",
+      "emails_from_enron": 85,
+      "emails_to_enron": 81,
+      "total_emails": 166,
+      "direction_ratio": 1.05
+    },
+    {
+      "domain": "ino.com",
+      "company_name": "Ino",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 166,
+      "total_emails": 166,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "hal-pc.org",
+      "company_name": "Hal Pc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 27,
+      "emails_to_enron": 139,
+      "total_emails": 166,
+      "direction_ratio": 0.19
+    },
+    {
+      "domain": "mail.house.gov",
+      "company_name": "Mail.House.Gov",
+      "category": "Government/Regulatory",
+      "relationship_type": "Regulatory Body",
+      "emails_from_enron": 146,
+      "emails_to_enron": 20,
+      "total_emails": 166,
+      "direction_ratio": 7.3
+    },
+    {
+      "domain": "dellnet.com",
+      "company_name": "Dellnet",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 140,
+      "emails_to_enron": 24,
+      "total_emails": 164,
+      "direction_ratio": 5.83
+    },
+    {
+      "domain": "qualcomm.com",
+      "company_name": "Qualcomm",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 121,
+      "emails_to_enron": 43,
+      "total_emails": 164,
+      "direction_ratio": 2.81
+    },
+    {
+      "domain": "mofo.com",
+      "company_name": "Mofo",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 34,
+      "emails_to_enron": 130,
+      "total_emails": 164,
+      "direction_ratio": 0.26
+    },
+    {
+      "domain": "interx.net",
+      "company_name": "Interx",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 84,
+      "emails_to_enron": 80,
+      "total_emails": 164,
+      "direction_ratio": 1.05
+    },
+    {
+      "domain": "avistacorp.com",
+      "company_name": "Avistacorp",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 140,
+      "emails_to_enron": 23,
+      "total_emails": 163,
+      "direction_ratio": 6.09
+    },
+    {
+      "domain": "synergyog.com",
+      "company_name": "Synergyog",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 5,
+      "emails_to_enron": 156,
+      "total_emails": 161,
+      "direction_ratio": 0.03
+    },
+    {
+      "domain": "alerts.equityalert.com",
+      "company_name": "Alerts.Equityalert",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 160,
+      "total_emails": 160,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "kochind.com",
+      "company_name": "Kochind",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 145,
+      "emails_to_enron": 14,
+      "total_emails": 159,
+      "direction_ratio": 10.36
+    },
+    {
+      "domain": "fp.edu",
+      "company_name": "Fp.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 158,
+      "emails_to_enron": 1,
+      "total_emails": 159,
+      "direction_ratio": 158.0
+    },
+    {
+      "domain": "utmb.edu",
+      "company_name": "Utmb.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 107,
+      "emails_to_enron": 51,
+      "total_emails": 158,
+      "direction_ratio": 2.1
+    },
+    {
+      "domain": "dell.com",
+      "company_name": "Dell",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 52,
+      "emails_to_enron": 106,
+      "total_emails": 158,
+      "direction_ratio": 0.49
+    },
+    {
+      "domain": "mwe.com",
+      "company_name": "Mwe",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 74,
+      "emails_to_enron": 82,
+      "total_emails": 156,
+      "direction_ratio": 0.9
+    },
+    {
+      "domain": "fce.com",
+      "company_name": "Fce",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 96,
+      "emails_to_enron": 60,
+      "total_emails": 156,
+      "direction_ratio": 1.6
+    },
+    {
+      "domain": "austintx.com",
+      "company_name": "Austintx",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 147,
+      "emails_to_enron": 9,
+      "total_emails": 156,
+      "direction_ratio": 16.33
+    },
+    {
+      "domain": "chematch.com",
+      "company_name": "Chematch",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 6,
+      "emails_to_enron": 149,
+      "total_emails": 155,
+      "direction_ratio": 0.04
+    },
+    {
+      "domain": "apx.com",
+      "company_name": "Apx",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 26,
+      "emails_to_enron": 128,
+      "total_emails": 154,
+      "direction_ratio": 0.2
+    },
+    {
+      "domain": "texas.net",
+      "company_name": "Texas",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 127,
+      "emails_to_enron": 27,
+      "total_emails": 154,
+      "direction_ratio": 4.7
+    },
+    {
+      "domain": "multexinvestornetwork.com",
+      "company_name": "Multexinvestornetwork",
+      "category": "Financial Services",
+      "relationship_type": "Financial Partner",
+      "emails_from_enron": 1,
+      "emails_to_enron": 152,
+      "total_emails": 153,
+      "direction_ratio": 0.01
+    },
+    {
+      "domain": "smith-graham.com",
+      "company_name": "Smith Graham",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 153,
+      "emails_to_enron": 0,
+      "total_emails": 153,
+      "direction_ratio": 153.0
+    },
+    {
+      "domain": "eldoradocorp.com",
+      "company_name": "Eldoradocorp",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 152,
+      "emails_to_enron": 1,
+      "total_emails": 153,
+      "direction_ratio": 152.0
+    },
+    {
+      "domain": "grubb-ellis.com",
+      "company_name": "Grubb Ellis",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 142,
+      "emails_to_enron": 10,
+      "total_emails": 152,
+      "direction_ratio": 14.2
+    },
+    {
+      "domain": "coned.com",
+      "company_name": "Coned",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 49,
+      "emails_to_enron": 103,
+      "total_emails": 152,
+      "direction_ratio": 0.48
+    },
+    {
+      "domain": "charter.net",
+      "company_name": "Charter",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 14,
+      "emails_to_enron": 138,
+      "total_emails": 152,
+      "direction_ratio": 0.1
+    },
+    {
+      "domain": "manorisd.net",
+      "company_name": "Manorisd",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 110,
+      "emails_to_enron": 42,
+      "total_emails": 152,
+      "direction_ratio": 2.62
+    },
+    {
+      "domain": "sterlinggrp.net",
+      "company_name": "Sterlinggrp",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 1,
+      "emails_to_enron": 150,
+      "total_emails": 151,
+      "direction_ratio": 0.01
+    },
+    {
+      "domain": "kbc.be",
+      "company_name": "Kbc.Be",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 150,
+      "total_emails": 150,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "nbsrealtors.com",
+      "company_name": "Nbsrealtors",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 66,
+      "emails_to_enron": 84,
+      "total_emails": 150,
+      "direction_ratio": 0.79
+    },
+    {
+      "domain": "macleoddixon.com",
+      "company_name": "Macleoddixon",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 68,
+      "emails_to_enron": 82,
+      "total_emails": 150,
+      "direction_ratio": 0.83
+    },
+    {
+      "domain": "sswpc.com",
+      "company_name": "Sswpc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 79,
+      "emails_to_enron": 71,
+      "total_emails": 150,
+      "direction_ratio": 1.11
+    },
+    {
+      "domain": "real-net.net",
+      "company_name": "Real Net",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 150,
+      "total_emails": 150,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "lsu.edu",
+      "company_name": "Lsu.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 118,
+      "emails_to_enron": 30,
+      "total_emails": 148,
+      "direction_ratio": 3.93
+    },
+    {
+      "domain": "truequote.com",
+      "company_name": "Truequote",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 60,
+      "emails_to_enron": 87,
+      "total_emails": 147,
+      "direction_ratio": 0.69
+    },
+    {
+      "domain": "platts.com",
+      "company_name": "Platts",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 14,
+      "emails_to_enron": 131,
+      "total_emails": 145,
+      "direction_ratio": 0.11
+    },
+    {
+      "domain": "energyadvocates.com",
+      "company_name": "Energyadvocates",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 25,
+      "emails_to_enron": 120,
+      "total_emails": 145,
+      "direction_ratio": 0.21
+    },
+    {
+      "domain": "nicor.com",
+      "company_name": "Nicor",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 112,
+      "emails_to_enron": 33,
+      "total_emails": 145,
+      "direction_ratio": 3.39
+    },
+    {
+      "domain": "fpl.com",
+      "company_name": "Fpl",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 116,
+      "emails_to_enron": 28,
+      "total_emails": 144,
+      "direction_ratio": 4.14
+    },
+    {
+      "domain": "pacificorp.com",
+      "company_name": "Pacificorp",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 122,
+      "emails_to_enron": 22,
+      "total_emails": 144,
+      "direction_ratio": 5.55
+    },
+    {
+      "domain": "cera.com",
+      "company_name": "Cera",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 33,
+      "emails_to_enron": 111,
+      "total_emails": 144,
+      "direction_ratio": 0.3
+    },
+    {
+      "domain": "edelmanmexico.com.mx",
+      "company_name": "Edelmanmexico.Mx",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 144,
+      "total_emails": 144,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "natsource.com",
+      "company_name": "Natsource",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 109,
+      "emails_to_enron": 34,
+      "total_emails": 143,
+      "direction_ratio": 3.21
+    },
+    {
+      "domain": "cargill.com",
+      "company_name": "Cargill",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 62,
+      "emails_to_enron": 80,
+      "total_emails": 142,
+      "direction_ratio": 0.78
+    },
+    {
+      "domain": "agsk.com",
+      "company_name": "Agsk",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 36,
+      "emails_to_enron": 105,
+      "total_emails": 141,
+      "direction_ratio": 0.34
+    },
+    {
+      "domain": "ieor.berkeley.edu",
+      "company_name": "Ieor.Berkeley.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 78,
+      "emails_to_enron": 63,
+      "total_emails": 141,
+      "direction_ratio": 1.24
+    },
+    {
+      "domain": "apbenergy.com",
+      "company_name": "Apbenergy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Partner",
+      "emails_from_enron": 66,
+      "emails_to_enron": 75,
+      "total_emails": 141,
+      "direction_ratio": 0.88
+    },
+    {
+      "domain": "eslawfirm.com",
+      "company_name": "Eslawfirm",
+      "category": "Legal Services",
+      "relationship_type": "Legal Advisor (Supplier)",
+      "emails_from_enron": 37,
+      "emails_to_enron": 103,
+      "total_emails": 140,
+      "direction_ratio": 0.36
+    },
+    {
+      "domain": "mrwassoc.com",
+      "company_name": "Mrwassoc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 70,
+      "emails_to_enron": 69,
+      "total_emails": 139,
+      "direction_ratio": 1.01
+    },
+    {
+      "domain": "ftenergy.com",
+      "company_name": "Ftenergy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Partner",
+      "emails_from_enron": 67,
+      "emails_to_enron": 72,
+      "total_emails": 139,
+      "direction_ratio": 0.93
+    },
+    {
+      "domain": "pjm.com",
+      "company_name": "Pjm",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 37,
+      "emails_to_enron": 101,
+      "total_emails": 138,
+      "direction_ratio": 0.37
+    },
+    {
+      "domain": "airmail.continental.com",
+      "company_name": "Airmail.Continental",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 138,
+      "total_emails": 138,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "hess.com",
+      "company_name": "Hess",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 58,
+      "emails_to_enron": 80,
+      "total_emails": 138,
+      "direction_ratio": 0.72
+    },
+    {
+      "domain": "texaco.com",
+      "company_name": "Texaco",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 103,
+      "emails_to_enron": 34,
+      "total_emails": 137,
+      "direction_ratio": 3.03
+    },
+    {
+      "domain": "i2.com",
+      "company_name": "I2",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 29,
+      "emails_to_enron": 108,
+      "total_emails": 137,
+      "direction_ratio": 0.27
+    },
+    {
+      "domain": "bear.com",
+      "company_name": "Bear",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 72,
+      "emails_to_enron": 64,
+      "total_emails": 136,
+      "direction_ratio": 1.12
+    },
+    {
+      "domain": "dowjones.com",
+      "company_name": "Dowjones",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 55,
+      "emails_to_enron": 81,
+      "total_emails": 136,
+      "direction_ratio": 0.68
+    },
+    {
+      "domain": "jonesgranger.com",
+      "company_name": "Jonesgranger",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 136,
+      "emails_to_enron": 0,
+      "total_emails": 136,
+      "direction_ratio": 136.0
+    },
+    {
+      "domain": "gulfsouthpl.com",
+      "company_name": "Gulfsouthpl",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 7,
+      "emails_to_enron": 129,
+      "total_emails": 136,
+      "direction_ratio": 0.05
+    },
+    {
+      "domain": "da.co.harris.tx.us",
+      "company_name": "Da.Co.Harris.Tx.Us",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 18,
+      "emails_to_enron": 118,
+      "total_emails": 136,
+      "direction_ratio": 0.15
+    },
+    {
+      "domain": "edisonmission.com",
+      "company_name": "Edisonmission",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Partner",
+      "emails_from_enron": 76,
+      "emails_to_enron": 60,
+      "total_emails": 136,
+      "direction_ratio": 1.27
+    },
+    {
+      "domain": "aglresources.com",
+      "company_name": "Aglresources",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 32,
+      "emails_to_enron": 103,
+      "total_emails": 135,
+      "direction_ratio": 0.31
+    },
+    {
+      "domain": "bdcimail.com",
+      "company_name": "Bdcimail",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 135,
+      "total_emails": 135,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "jschmid.com",
+      "company_name": "Jschmid",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 2,
+      "emails_to_enron": 133,
+      "total_emails": 135,
+      "direction_ratio": 0.02
+    },
+    {
+      "domain": "epelectric.com",
+      "company_name": "Epelectric",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Partner",
+      "emails_from_enron": 72,
+      "emails_to_enron": 62,
+      "total_emails": 134,
+      "direction_ratio": 1.16
+    },
+    {
+      "domain": "oneok.com",
+      "company_name": "Oneok",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 13,
+      "emails_to_enron": 120,
+      "total_emails": 133,
+      "direction_ratio": 0.11
+    },
+    {
+      "domain": "travelocity.com",
+      "company_name": "Travelocity",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 132,
+      "total_emails": 132,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "lacimagroup.com",
+      "company_name": "Lacimagroup",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 68,
+      "emails_to_enron": 64,
+      "total_emails": 132,
+      "direction_ratio": 1.06
+    },
+    {
+      "domain": "risk.co.uk",
+      "company_name": "Risk.Co.Uk",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 83,
+      "emails_to_enron": 48,
+      "total_emails": 131,
+      "direction_ratio": 1.73
+    },
+    {
+      "domain": "akingump.com",
+      "company_name": "Akingump",
+      "category": "Legal Services",
+      "relationship_type": "Legal Advisor (Supplier)",
+      "emails_from_enron": 83,
+      "emails_to_enron": 48,
+      "total_emails": 131,
+      "direction_ratio": 1.73
+    },
+    {
+      "domain": "expedia.customer-email.com",
+      "company_name": "Expedia.Customer Email",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 130,
+      "total_emails": 130,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "tecoenergy.com",
+      "company_name": "Tecoenergy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 96,
+      "emails_to_enron": 34,
+      "total_emails": 130,
+      "direction_ratio": 2.82
+    },
+    {
+      "domain": "texas.usta.com",
+      "company_name": "Texas.Usta",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 99,
+      "emails_to_enron": 30,
+      "total_emails": 129,
+      "direction_ratio": 3.3
+    },
+    {
+      "domain": "mail.energycentral.com",
+      "company_name": "Mail.Energycentral",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 1,
+      "emails_to_enron": 128,
+      "total_emails": 129,
+      "direction_ratio": 0.01
+    },
+    {
+      "domain": "smartreminders.com",
+      "company_name": "Smartreminders",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 129,
+      "total_emails": 129,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "hmot.com",
+      "company_name": "Hmot",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 126,
+      "emails_to_enron": 2,
+      "total_emails": 128,
+      "direction_ratio": 63.0
+    },
+    {
+      "domain": "energy.state.ca.us",
+      "company_name": "Energy.State.Ca.Us",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 120,
+      "emails_to_enron": 8,
+      "total_emails": 128,
+      "direction_ratio": 15.0
+    },
+    {
+      "domain": "leland.stanford.edu",
+      "company_name": "Leland.Stanford.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 128,
+      "emails_to_enron": 0,
+      "total_emails": 128,
+      "direction_ratio": 128.0
+    },
+    {
+      "domain": "ogwb.com",
+      "company_name": "Ogwb",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 78,
+      "emails_to_enron": 50,
+      "total_emails": 128,
+      "direction_ratio": 1.56
+    },
+    {
+      "domain": "yale.edu",
+      "company_name": "Yale.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 50,
+      "emails_to_enron": 78,
+      "total_emails": 128,
+      "direction_ratio": 0.64
+    },
+    {
+      "domain": "mba2002.hbs.edu",
+      "company_name": "Mba2002.Hbs.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 120,
+      "emails_to_enron": 7,
+      "total_emails": 127,
+      "direction_ratio": 17.14
+    },
+    {
+      "domain": "intelligencepress.com",
+      "company_name": "Intelligencepress",
+      "category": "News/Media",
+      "relationship_type": "Media Contact",
+      "emails_from_enron": 85,
+      "emails_to_enron": 42,
+      "total_emails": 127,
+      "direction_ratio": 2.02
+    },
+    {
+      "domain": "iexalt.net",
+      "company_name": "Iexalt",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 18,
+      "emails_to_enron": 109,
+      "total_emails": 127,
+      "direction_ratio": 0.17
+    },
+    {
+      "domain": "transredes.com",
+      "company_name": "Transredes",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 126,
+      "emails_to_enron": 0,
+      "total_emails": 126,
+      "direction_ratio": 126.0
+    },
+    {
+      "domain": "prodigy.net",
+      "company_name": "Prodigy",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 74,
+      "emails_to_enron": 51,
+      "total_emails": 125,
+      "direction_ratio": 1.45
+    },
+    {
+      "domain": "pirnie.com",
+      "company_name": "Pirnie",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 125,
+      "emails_to_enron": 0,
+      "total_emails": 125,
+      "direction_ratio": 125.0
+    },
+    {
+      "domain": "cliffordchance.com",
+      "company_name": "Cliffordchance",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 71,
+      "emails_to_enron": 54,
+      "total_emails": 125,
+      "direction_ratio": 1.31
+    },
+    {
+      "domain": "spurr.org",
+      "company_name": "Spurr",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 53,
+      "emails_to_enron": 72,
+      "total_emails": 125,
+      "direction_ratio": 0.74
+    },
+    {
+      "domain": "ml.com",
+      "company_name": "Ml",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 109,
+      "emails_to_enron": 16,
+      "total_emails": 125,
+      "direction_ratio": 6.81
+    },
+    {
+      "domain": "usg.com",
+      "company_name": "Usg",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 5,
+      "emails_to_enron": 119,
+      "total_emails": 124,
+      "direction_ratio": 0.04
+    },
+    {
+      "domain": "calchamber.com",
+      "company_name": "Calchamber",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 122,
+      "emails_to_enron": 2,
+      "total_emails": 124,
+      "direction_ratio": 61.0
+    },
+    {
+      "domain": "modrall.com",
+      "company_name": "Modrall",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 56,
+      "emails_to_enron": 68,
+      "total_emails": 124,
+      "direction_ratio": 0.82
+    },
+    {
+      "domain": "broadwing.com",
+      "company_name": "Broadwing",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 124,
+      "emails_to_enron": 0,
+      "total_emails": 124,
+      "direction_ratio": 124.0
+    },
+    {
+      "domain": "us.cgeyc.com",
+      "company_name": "Us.Cgeyc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 123,
+      "emails_to_enron": 0,
+      "total_emails": 123,
+      "direction_ratio": 123.0
+    },
+    {
+      "domain": "fulbright.com",
+      "company_name": "Fulbright",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 43,
+      "emails_to_enron": 80,
+      "total_emails": 123,
+      "direction_ratio": 0.54
+    },
+    {
+      "domain": "iso-ne.com",
+      "company_name": "Iso Ne",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 8,
+      "emails_to_enron": 115,
+      "total_emails": 123,
+      "direction_ratio": 0.07
+    },
+    {
+      "domain": "royalbank.com",
+      "company_name": "Royalbank",
+      "category": "Financial Services",
+      "relationship_type": "Financial Partner",
+      "emails_from_enron": 78,
+      "emails_to_enron": 44,
+      "total_emails": 122,
+      "direction_ratio": 1.77
+    },
+    {
+      "domain": "enerfax.com",
+      "company_name": "Enerfax",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 122,
+      "total_emails": 122,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "city.palo-alto.ca.us",
+      "company_name": "City.Palo Alto.Ca.Us",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 45,
+      "emails_to_enron": 77,
+      "total_emails": 122,
+      "direction_ratio": 0.58
+    },
+    {
+      "domain": "clickaction.net",
+      "company_name": "Clickaction",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 121,
+      "total_emails": 121,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "deloitte.ca",
+      "company_name": "Deloitte.Ca",
+      "category": "Consulting",
+      "relationship_type": "Consultant (Supplier)",
+      "emails_from_enron": 93,
+      "emails_to_enron": 28,
+      "total_emails": 121,
+      "direction_ratio": 3.32
+    },
+    {
+      "domain": "lplpi.com",
+      "company_name": "Lplpi",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 51,
+      "emails_to_enron": 70,
+      "total_emails": 121,
+      "direction_ratio": 0.73
+    },
+    {
+      "domain": "ashfordumc.org",
+      "company_name": "Ashfordumc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 4,
+      "emails_to_enron": 117,
+      "total_emails": 121,
+      "direction_ratio": 0.03
+    },
+    {
+      "domain": "lilly.com",
+      "company_name": "Lilly",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 35,
+      "emails_to_enron": 86,
+      "total_emails": 121,
+      "direction_ratio": 0.41
+    },
+    {
+      "domain": "cqg.com",
+      "company_name": "Cqg",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 121,
+      "total_emails": 121,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "cox-internet.com",
+      "company_name": "Cox Internet",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 9,
+      "emails_to_enron": 111,
+      "total_emails": 120,
+      "direction_ratio": 0.08
+    },
+    {
+      "domain": "watervalley.net",
+      "company_name": "Watervalley",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 85,
+      "emails_to_enron": 35,
+      "total_emails": 120,
+      "direction_ratio": 2.43
+    },
+    {
+      "domain": "mail.southwest.com",
+      "company_name": "Mail.Southwest",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 2,
+      "emails_to_enron": 118,
+      "total_emails": 120,
+      "direction_ratio": 0.02
+    },
+    {
+      "domain": "attglobal.net",
+      "company_name": "Attglobal",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 18,
+      "emails_to_enron": 102,
+      "total_emails": 120,
+      "direction_ratio": 0.18
+    },
+    {
+      "domain": "petersco.com",
+      "company_name": "Petersco",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 102,
+      "emails_to_enron": 18,
+      "total_emails": 120,
+      "direction_ratio": 5.67
+    },
+    {
+      "domain": "titanelectric.com",
+      "company_name": "Titanelectric",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 120,
+      "emails_to_enron": 0,
+      "total_emails": 120,
+      "direction_ratio": 120.0
+    },
+    {
+      "domain": "cliverunnells.com",
+      "company_name": "Cliverunnells",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 44,
+      "emails_to_enron": 75,
+      "total_emails": 119,
+      "direction_ratio": 0.59
+    },
+    {
+      "domain": "ubspw.com",
+      "company_name": "Ubspw",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 16,
+      "emails_to_enron": 102,
+      "total_emails": 118,
+      "direction_ratio": 0.16
+    },
+    {
+      "domain": "csc.com",
+      "company_name": "Csc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 82,
+      "emails_to_enron": 36,
+      "total_emails": 118,
+      "direction_ratio": 2.28
+    },
+    {
+      "domain": "smig.net",
+      "company_name": "Smig",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 118,
+      "emails_to_enron": 0,
+      "total_emails": 118,
+      "direction_ratio": 118.0
+    },
+    {
+      "domain": "db.com",
+      "company_name": "Db",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 92,
+      "emails_to_enron": 25,
+      "total_emails": 117,
+      "direction_ratio": 3.68
+    },
+    {
+      "domain": "exxon.sprint.com",
+      "company_name": "Exxon.Sprint",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 99,
+      "emails_to_enron": 18,
+      "total_emails": 117,
+      "direction_ratio": 5.5
+    },
+    {
+      "domain": "sdge.com",
+      "company_name": "Sdge",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 112,
+      "emails_to_enron": 5,
+      "total_emails": 117,
+      "direction_ratio": 22.4
+    },
+    {
+      "domain": "sppc.com",
+      "company_name": "Sppc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 103,
+      "emails_to_enron": 14,
+      "total_emails": 117,
+      "direction_ratio": 7.36
+    },
+    {
+      "domain": "trinity.edu",
+      "company_name": "Trinity.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 110,
+      "emails_to_enron": 6,
+      "total_emails": 116,
+      "direction_ratio": 18.33
+    },
+    {
+      "domain": "cts.com",
+      "company_name": "Cts",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 62,
+      "emails_to_enron": 53,
+      "total_emails": 115,
+      "direction_ratio": 1.17
+    },
+    {
+      "domain": "nationalpublishing.net",
+      "company_name": "Nationalpublishing",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 0,
+      "emails_to_enron": 114,
+      "total_emails": 114,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "bellatlantic.net",
+      "company_name": "Bellatlantic",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 18,
+      "emails_to_enron": 96,
+      "total_emails": 114,
+      "direction_ratio": 0.19
+    },
+    {
+      "domain": "ssmb.com",
+      "company_name": "Ssmb",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 78,
+      "emails_to_enron": 36,
+      "total_emails": 114,
+      "direction_ratio": 2.17
+    },
+    {
+      "domain": "ingaa.org",
+      "company_name": "Ingaa",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 19,
+      "emails_to_enron": 94,
+      "total_emails": 113,
+      "direction_ratio": 0.2
+    },
+    {
+      "domain": "ou.edu",
+      "company_name": "Ou.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 70,
+      "emails_to_enron": 42,
+      "total_emails": 112,
+      "direction_ratio": 1.67
+    },
+    {
+      "domain": "ceibo.entelnet.bo",
+      "company_name": "Ceibo.Entelnet.Bo",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 112,
+      "emails_to_enron": 0,
+      "total_emails": 112,
+      "direction_ratio": 112.0
+    },
+    {
+      "domain": "jpmorgan.com",
+      "company_name": "Jpmorgan",
+      "category": "Financial Services",
+      "relationship_type": "Financial Partner",
+      "emails_from_enron": 59,
+      "emails_to_enron": 53,
+      "total_emails": 112,
+      "direction_ratio": 1.11
+    },
+    {
+      "domain": "nationaljournal.com",
+      "company_name": "Nationaljournal",
+      "category": "News/Media",
+      "relationship_type": "Media Contact",
+      "emails_from_enron": 0,
+      "emails_to_enron": 112,
+      "total_emails": 112,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "mail.ev1.net",
+      "company_name": "Mail.Ev1",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 40,
+      "emails_to_enron": 71,
+      "total_emails": 111,
+      "direction_ratio": 0.56
+    },
+    {
+      "domain": "idahopower.com",
+      "company_name": "Idahopower",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 94,
+      "emails_to_enron": 17,
+      "total_emails": 111,
+      "direction_ratio": 5.53
+    },
+    {
+      "domain": "morganstanley.com",
+      "company_name": "Morganstanley",
+      "category": "Financial Services",
+      "relationship_type": "Financial Partner",
+      "emails_from_enron": 41,
+      "emails_to_enron": 69,
+      "total_emails": 110,
+      "direction_ratio": 0.59
+    },
+    {
+      "domain": "rocketmail.com",
+      "company_name": "Rocketmail",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 7,
+      "emails_to_enron": 103,
+      "total_emails": 110,
+      "direction_ratio": 0.07
+    },
+    {
+      "domain": "sprintmail.com",
+      "company_name": "Sprintmail",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 57,
+      "emails_to_enron": 52,
+      "total_emails": 109,
+      "direction_ratio": 1.1
+    },
+    {
+      "domain": "vnf.com",
+      "company_name": "Vnf",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 81,
+      "emails_to_enron": 28,
+      "total_emails": 109,
+      "direction_ratio": 2.89
+    },
+    {
+      "domain": "flex.net",
+      "company_name": "Flex",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 19,
+      "emails_to_enron": 90,
+      "total_emails": 109,
+      "direction_ratio": 0.21
+    },
+    {
+      "domain": "oracle.com",
+      "company_name": "Oracle",
+      "category": "Technology",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 78,
+      "emails_to_enron": 30,
+      "total_emails": 108,
+      "direction_ratio": 2.6
+    },
+    {
+      "domain": "oebi.com",
+      "company_name": "Oebi",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 107,
+      "emails_to_enron": 0,
+      "total_emails": 107,
+      "direction_ratio": 107.0
+    },
+    {
+      "domain": "oxy.com",
+      "company_name": "Oxy",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 76,
+      "emails_to_enron": 31,
+      "total_emails": 107,
+      "direction_ratio": 2.45
+    },
+    {
+      "domain": "ci.pasadena.ca.us",
+      "company_name": "Ci.Pasadena.Ca.Us",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 36,
+      "emails_to_enron": 71,
+      "total_emails": 107,
+      "direction_ratio": 0.51
+    },
+    {
+      "domain": "transcanada.com",
+      "company_name": "Transcanada",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 20,
+      "emails_to_enron": 86,
+      "total_emails": 106,
+      "direction_ratio": 0.23
+    },
+    {
+      "domain": "management.wharton.upenn.edu",
+      "company_name": "Management.Wharton.Upenn.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 30,
+      "emails_to_enron": 76,
+      "total_emails": 106,
+      "direction_ratio": 0.39
+    },
+    {
+      "domain": "cdnam.com",
+      "company_name": "Cdnam",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 95,
+      "emails_to_enron": 11,
+      "total_emails": 106,
+      "direction_ratio": 8.64
+    },
+    {
+      "domain": "eadslink.com",
+      "company_name": "Eadslink",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 20,
+      "emails_to_enron": 86,
+      "total_emails": 106,
+      "direction_ratio": 0.23
+    },
+    {
+      "domain": "forexnews.com",
+      "company_name": "Forexnews",
+      "category": "News/Media",
+      "relationship_type": "Media Contact",
+      "emails_from_enron": 0,
+      "emails_to_enron": 106,
+      "total_emails": 106,
+      "direction_ratio": 0.0
+    },
+    {
+      "domain": "nwppc.org",
+      "company_name": "Nwppc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 100,
+      "emails_to_enron": 5,
+      "total_emails": 105,
+      "direction_ratio": 20.0
+    },
+    {
+      "domain": "cmsenergy.com",
+      "company_name": "Cmsenergy",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Trading Counterparty/Client",
+      "emails_from_enron": 70,
+      "emails_to_enron": 34,
+      "total_emails": 104,
+      "direction_ratio": 2.06
+    },
+    {
+      "domain": "oilstates.com",
+      "company_name": "Oilstates",
+      "category": "Energy/Utilities",
+      "relationship_type": "Energy Supplier/Partner",
+      "emails_from_enron": 14,
+      "emails_to_enron": 90,
+      "total_emails": 104,
+      "direction_ratio": 0.16
+    },
+    {
+      "domain": "censtrat.com",
+      "company_name": "Censtrat",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 55,
+      "emails_to_enron": 49,
+      "total_emails": 104,
+      "direction_ratio": 1.12
+    },
+    {
+      "domain": "morgangroup.com",
+      "company_name": "Morgangroup",
+      "category": "Financial Services",
+      "relationship_type": "Financial Partner",
+      "emails_from_enron": 82,
+      "emails_to_enron": 21,
+      "total_emails": 103,
+      "direction_ratio": 3.9
+    },
+    {
+      "domain": "realtor.com",
+      "company_name": "Realtor",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 103,
+      "emails_to_enron": 0,
+      "total_emails": 103,
+      "direction_ratio": 103.0
+    },
+    {
+      "domain": "reuters.com",
+      "company_name": "Reuters",
+      "category": "News/Media",
+      "relationship_type": "Media Contact",
+      "emails_from_enron": 28,
+      "emails_to_enron": 75,
+      "total_emails": 103,
+      "direction_ratio": 0.37
+    },
+    {
+      "domain": "argentinc.com",
+      "company_name": "Argentinc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 19,
+      "emails_to_enron": 83,
+      "total_emails": 102,
+      "direction_ratio": 0.23
+    },
+    {
+      "domain": "usa.conoco.com",
+      "company_name": "Usa.Conoco",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 67,
+      "emails_to_enron": 35,
+      "total_emails": 102,
+      "direction_ratio": 1.91
+    },
+    {
+      "domain": "wyattfirm.com",
+      "company_name": "Wyattfirm",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 98,
+      "emails_to_enron": 3,
+      "total_emails": 101,
+      "direction_ratio": 32.67
+    },
+    {
+      "domain": "uth.tmc.edu",
+      "company_name": "Uth.Tmc.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 92,
+      "emails_to_enron": 9,
+      "total_emails": 101,
+      "direction_ratio": 10.22
+    },
+    {
+      "domain": "pnucc.org",
+      "company_name": "Pnucc",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 100,
+      "emails_to_enron": 0,
+      "total_emails": 100,
+      "direction_ratio": 100.0
+    },
+    {
+      "domain": "antigenics.com",
+      "company_name": "Antigenics",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 30,
+      "emails_to_enron": 70,
+      "total_emails": 100,
+      "direction_ratio": 0.43
+    },
+    {
+      "domain": "andrew.cmu.edu",
+      "company_name": "Andrew.Cmu.Edu",
+      "category": "Other/Unknown",
+      "relationship_type": "Business Partner",
+      "emails_from_enron": 67,
+      "emails_to_enron": 33,
+      "total_emails": 100,
+      "direction_ratio": 2.03
+    }
+  ]
+}

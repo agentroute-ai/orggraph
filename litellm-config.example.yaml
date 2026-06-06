@@ -1,0 +1,60 @@
+# LiteLLM router config for fronting two DGX-Spark vLLM endpoints serving
+# the same model. Drop this in next to your code, copy to litellm-config.yaml,
+# and start the proxy with:
+#
+#     uvx --from "litellm[proxy]" litellm --config litellm-config.yaml --port 4000
+#
+# Then point Stage 2a (and the bench) at the proxy:
+#
+#     OPENAI_BASE_URL=http://localhost:4000/v1 \
+#     INFERENCE_MODEL=gemma-4-e4b \
+#       orggraph-signals-extract --workers 64
+#
+# The router multiplies your effective throughput by ~2x (two GPUs each
+# running the model independently). LiteLLM picks one backend per request
+# per the routing_strategy below; vLLM's own continuous batching handles
+# concurrent requests on each side.
+
+model_list:
+  - model_name: gemma-4-e4b   # the alias your scripts use
+    litellm_params:
+      model: openai/google/gemma-4-E4B-it
+      api_base: http://dgx-node-1:8000/v1
+      api_key: EMPTY
+      rpm: 600                # rate-limit hint, optional
+  - model_name: gemma-4-e4b
+    litellm_params:
+      model: openai/google/gemma-4-E4B-it
+      api_base: http://dgx-node-2:8000/v1   # second DGX (placeholder IP)
+      api_key: EMPTY
+      rpm: 600
+
+# Optional: also expose MiniMax for Stage 2b cluster naming and Stage 4a personas
+# (kept on the first DGX since reasoning-style models benefit less from sharding).
+  - model_name: minimax-m2.7
+    litellm_params:
+      model: openai/cyankiwi/MiniMax-M2.7-AWQ-4bit
+      api_base: http://dgx-node-1:8000/v1
+      api_key: EMPTY
+
+router_settings:
+  # "least-busy" routes each call to the backend with the fewest in-flight
+  # requests - the right choice for batched LLM inference. Alternatives:
+  #   "simple-shuffle"        round-robin (cheap, fine if backends equal)
+  #   "latency-based-routing" picks fastest median latency
+  routing_strategy: least-busy
+  num_retries: 2
+  request_timeout: 120
+  allowed_fails: 3            # circuit-breaker per deployment
+  cooldown_time: 30           # seconds offline after circuit trips
+  redis_host: null            # set if you want shared state across proxy replicas
+
+litellm_settings:
+  drop_params: true            # silently drop OpenAI fields vLLM doesn't know
+  set_verbose: false
+  json_logs: true
+  request_timeout: 120
+
+general_settings:
+  master_key: null             # set if exposing the proxy publicly
+  database_url: null           # optional, for usage tracking

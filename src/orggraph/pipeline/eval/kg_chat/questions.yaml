@@ -1,0 +1,266 @@
+# KG-Chat structural eval question set.
+#
+# Generated 2026-05-24 by querying the live Neo4j + Postgres state.
+# Auto-verifiable GT for sections 1-5 and 8 (28 questions); sections
+# 6-7 (7 questions) carry placeholders pending manual curation.
+#
+# Grading kinds:
+#   exact_match    — string equality (case-insensitive, trimmed)
+#   contains       — answer must contain the gt string
+#   integer        — numeric equality (with optional tolerance)
+#   numeric        — float equality with absolute tolerance
+#   name_in_set    — answer must contain at least k names from the set
+#   citation_hit   — agent fetched any of the gt email_ids via
+#                    get_email_content / get_thread / get_emails_bulk
+#   judge          — LLM judge on answer correctness against the GT facts
+
+version: 1
+generated_at: "2026-05-24"
+n_questions: 27
+n_auto_verified: 27
+n_needs_curation: 0
+# Content and speech-act sections deferred. The 27 questions below all have
+# unambiguous GT pulled from the live KG / pair_signals state on 2026-05-24.
+# Tools exercised: get_person, find_person, get_org_chart, find_topic_collaborators,
+# get_pair_signals, get_thread_history, get_centrality, get_dominance_score,
+# run_cypher, run_sql (10 of 15). Content-IR tools (search_emails_semantic,
+# get_email_content, get_emails_bulk, get_thread, find_emails)
+# remain in the catalog for the dashboard demo but are not measured here.
+
+questions:
+
+  # ------------------------------------------------------------------
+  # Section 1 — Hierarchy
+  # ------------------------------------------------------------------
+
+  - id: H1
+    category: hierarchy
+    question: "Who does John Arnold report to in this corpus?"
+    expected_tools: [get_person, get_org_chart]
+    grading: {kind: contains, value: "John Lavorato"}
+
+  - id: H2
+    category: hierarchy
+    question: "Who is Robert Badeer's direct manager?"
+    expected_tools: [get_person, get_org_chart]
+    # Note: KG records Badeer -> Jeff Dasovich; the CSV ground truth says
+    # John Arnold. We grade against the KG since that's what the chat tools
+    # surface. The discrepancy is documented in the spec.
+    grading: {kind: contains, value: "Jeff Dasovich"}
+
+  - id: H3
+    category: hierarchy
+    question: "How many people report directly to John Lavorato?"
+    expected_tools: [get_org_chart]
+    grading: {kind: integer, value: 36, tolerance: 2}
+
+  - id: H4
+    category: hierarchy
+    question: "Name three people who report directly to John Lavorato."
+    expected_tools: [get_org_chart]
+    grading:
+      kind: name_in_set
+      k: 3
+      names:
+        [Andy Zipper, Benjamin Rogers, Chris Dorland, Dana Davis,
+         David Delainey, Don Baughman, Dutch Quigley, Eric Saibi,
+         Errol McLaughlin, Fletcher Sturm, Harpreet Arora, Jeff King,
+         Jeffery Skilling, Jeffrey Shankman, Jim Schwieger, Joe Quenet,
+         Joe Stepenovitch, John Arnold, John Zufferli, Jonathan Mckay,
+         Juan Hernandez, Kevin Presto, Larry Campbell, Louise Kitchen,
+         Michael Maggi, Mike Carson, Mike McConnell, Paul Thomas,
+         Robert Benson, Robin Rodrigue, Sally Beck, Stacey White,
+         Tom Donohoe, Vince Kaminski, Vladi Pimenov, William Whalley Williams]
+
+  - id: H5
+    category: hierarchy
+    question: "Who is the manager of Robert Badeer's manager?"
+    expected_tools: [get_org_chart]
+    grading: {kind: contains, value: "James Steffes"}
+
+  - id: H6
+    category: hierarchy
+    question: "What is Louise Kitchen's title?"
+    expected_tools: [get_person]
+    grading: {kind: contains, value: "Enron Online"}
+
+  - id: H7
+    category: hierarchy
+    question: "What hierarchy tier is Eric Bass in according to the OrgGraph?"
+    expected_tools: [get_person]
+    # KG Person.tier=3 (what get_person returns); CSV says Employee tier 0;
+    # tier_v3=2. We grade against what the agent's tools surface (Person.tier),
+    # matching either the bare integer or the Director-tier label.
+    grading: {kind: contains, value: "3"}
+
+  # ------------------------------------------------------------------
+  # Section 2 — Identity / fuzzy lookup
+  # ------------------------------------------------------------------
+
+  - id: I1
+    category: identity
+    question: "Who is Skilling in this corpus?"
+    expected_tools: [find_person]
+    grading: {kind: contains, value: "Jeffery Skilling"}
+
+  - id: I2
+    category: identity
+    question: "Who is the Chief of Staff at Enron?"
+    expected_tools: [find_person]
+    grading: {kind: contains, value: "Steven Kean"}
+
+  - id: I3
+    category: identity
+    question: "Who runs Enron Energy Services?"
+    expected_tools: [find_person]
+    grading: {kind: contains, value: "David Delainey"}
+
+  - id: I4
+    category: identity
+    question: "Find every person whose first name starts with Sara in this corpus."
+    expected_tools: [find_person, run_cypher]
+    grading: {kind: contains, value: "Sara Shackleton"}
+
+  # ------------------------------------------------------------------
+  # Section 3 — Dominance / centrality
+  # ------------------------------------------------------------------
+
+  - id: D1
+    category: dominance
+    question: "Who are the top 3 most dominant people in the org by composite_score_v3?"
+    expected_tools: [get_centrality]
+    grading:
+      kind: name_in_set
+      k: 3
+      names: [John Lavorato, Lawrence Greg Whalley, Louise Kitchen, Greg Whalley]
+      # "Greg Whalley" alias accepted
+
+  - id: D2
+    category: dominance
+    question: "What is Kenneth Lay's rank by composite_score_v3?"
+    expected_tools: [get_dominance_score]
+    grading: {kind: integer, value: 5, tolerance: 0}
+
+  - id: D3
+    category: dominance
+    question: "Name the top 3 people by PageRank in the communication network."
+    expected_tools: [get_centrality]
+    grading:
+      kind: name_in_set
+      k: 3
+      names: [John Lavorato, Michael Grigsby, Louise Kitchen]
+
+  - id: D4
+    category: dominance
+    question: "Who is the most central person at hierarchy tier 3 according to get_centrality?"
+    expected_tools: [get_centrality]
+    # get_centrality(tier=3) filters on Person.tier (not tier_v3). Top result
+    # is Kenneth Lay (tier=3, tier_v3=4, composite_score_v3=6.86). Original
+    # GT was Stacy Dickson via tier_v3=3 query; corrected to match the tool's
+    # actual filter semantics.
+    grading: {kind: contains, value: "Kenneth Lay"}
+
+  - id: D5
+    category: dominance
+    question: "How dominant is Jeff Dasovich? Give his composite_score_v3."
+    expected_tools: [get_dominance_score]
+    grading: {kind: numeric, value: 4.69, tolerance: 0.15}
+
+  # ------------------------------------------------------------------
+  # Section 4 — Dyadic relationships
+  # ------------------------------------------------------------------
+
+  - id: Dy1
+    category: dyadic
+    question: "Which two people exchange the most email in the corpus?"
+    expected_tools: [run_sql, get_pair_signals]
+    grading:
+      kind: name_in_set
+      k: 2
+      names: [Jeff Dasovich, Richard Shapiro]
+
+  - id: Dy2
+    category: dyadic
+    question: "How many emails has Jeff Dasovich sent to Richard Shapiro?"
+    expected_tools: [get_pair_signals]
+    grading: {kind: integer, value: 848, tolerance: 30}
+
+  - id: Dy3
+    category: dyadic
+    question: "What is the request-to-commit ratio from Jeff Dasovich to James Steffes per pair_signals?"
+    expected_tools: [get_pair_signals]
+    # pair_signals.request_commit_ratio is cross-direction: requests A->B
+    # divided by commits B->A back. Stored value for this pair is 13.25
+    # (212 requests / 16 reverse commits). Original GT of 3.72 used
+    # same-direction division, which the pipeline does not compute.
+    grading: {kind: numeric, value: 13.25, tolerance: 0.5}
+
+  - id: Dy4
+    category: dyadic
+    question: "What were the last 3 email subjects between Tana Jones (sender) and Marie Heard (recipient)?"
+    expected_tools: [get_thread_history]
+    # Top-3 most recent subjects via get_thread_history(sender, recipient, n=3).
+    # GT verified at eval-run time by re-issuing the same call.
+    grading: {kind: judge, prompt: "Does the answer name at least 2 specific email subjects between Tana Jones and Marie Heard?"}
+
+  - id: Dy5
+    category: dyadic
+    question: "What is the mean outgoing sentiment from Jeff Dasovich to Steven Kean?"
+    expected_tools: [get_pair_signals]
+    grading: {kind: numeric, value: -0.0057, tolerance: 0.01}
+
+  # ------------------------------------------------------------------
+  # Section 5 — Topics / collaboration
+  # ------------------------------------------------------------------
+
+  - id: T1
+    category: topics
+    question: "Who are the top 3 people working on trading topics by email volume?"
+    expected_tools: [find_topic_collaborators]
+    grading:
+      kind: name_in_set
+      k: 3
+      names: [Tana Jones, John Arnold, Louise Kitchen, Kevin Hyatt, Sara Shackleton]
+
+  - id: T2
+    category: topics
+    question: "Which person handles California regulatory affairs most actively?"
+    expected_tools: [find_topic_collaborators, find_person]
+    grading: {kind: contains, value: "Jeff Dasovich"}
+
+  - id: T3
+    category: topics
+    question: "Who is the top person on the Risk topic by email volume?"
+    expected_tools: [find_topic_collaborators]
+    grading: {kind: contains, value: "Vince Kaminski"}
+
+  - id: T4
+    category: topics
+    question: "Name two people who work on both Trading and Risk topics."
+    expected_tools: [run_cypher]
+    grading:
+      kind: name_in_set
+      k: 2
+      names: [Mark Haedicke, Lynn Blair, Sally Beck, John Arnold,
+              John Lavorato, Mark Taylor, Vince Kaminski, Dutch Quigley,
+              Kevin Hyatt, Mike McConnell]
+
+  # ------------------------------------------------------------------
+  # Section 6 — Escape hatches
+  # ------------------------------------------------------------------
+
+  - id: E1
+    category: escape
+    question: "Which people are managers of more than 10 direct reports in this organisation?"
+    expected_tools: [run_cypher]
+    grading:
+      kind: name_in_set
+      k: 6
+      names: [John Lavorato, Mike Swerzbin, Michael Grigsby, Kevin Hyatt,
+              Steven Harris, Chris Germany, Mark Taylor, Elizabeth Sager]
+
+  - id: E2
+    category: escape
+    question: "Among emails sent by Kenneth Lay, what fraction carry positive sentiment (sentiment > 0)?"
+    expected_tools: [run_sql]
+    grading: {kind: numeric, value: 0.68, tolerance: 0.05}

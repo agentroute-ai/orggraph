@@ -1,0 +1,83 @@
+[project]
+name = "orggraph"
+version = "0.1.0"
+description = "OrgGraph: Unsupervised Organizational Knowledge Extraction from Email Corpora"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "networkx>=3.3",
+    "scikit-learn>=1.5",
+    "scipy>=1.14",
+    "pyarrow>=17.0",
+    "datasets>=3.0",
+    "umap-learn>=0.5",
+    "matplotlib>=3.8",
+    "tqdm>=4.66",
+    "httpx>=0.27",
+    "jsonschema>=4.0",
+    "openai>=1.40",
+    "neo4j>=5.26",
+    "psycopg[binary]>=3.2",
+    "pgvector>=0.3",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.6",
+    "pre-commit>=3.5",
+]
+dashboard = [
+    "streamlit>=1.39",
+    "plotly>=5.24",
+    "pyvis>=0.3.2",
+]
+
+[project.scripts]
+orggraph-ground-truth          = "orggraph.pipeline.ground_truth:main"
+orggraph-corpus-filter         = "orggraph.pipeline.corpus.filter:main"
+orggraph-email-embed           = "orggraph.pipeline.email.embed:main"
+orggraph-email-metadata        = "orggraph.pipeline.email.metadata:main"
+orggraph-signals-extract       = "orggraph.pipeline.signals.extract:main"
+orggraph-signals-aggregate     = "orggraph.pipeline.signals.aggregate:main"
+orggraph-clusters-discover     = "orggraph.pipeline.clusters.discover:main"
+orggraph-clusters-canonicalize = "orggraph.pipeline.clusters.canonicalize:main"
+orggraph-enrich-persons        = "orggraph.pipeline.enrich.persons:main"
+orggraph-enrich-entities       = "orggraph.pipeline.enrich.entities:main"
+orggraph-enrich-pairs          = "orggraph.pipeline.enrich.pairs:main"
+orggraph-enrich-prompts        = "orggraph.pipeline.enrich.prompts:main"
+orggraph-enrich-canonicalize   = "orggraph.pipeline.enrich.canonicalize_roles:main"
+orggraph-agents-tools          = "orggraph.pipeline.agents.__main__:main"
+orggraph-score                 = "orggraph.pipeline.score.recompute:main"
+orggraph-kg-load               = "orggraph.pipeline.kg.load:main"
+orggraph-kg-sync               = "orggraph.pipeline.kg.sync:main"
+orggraph-kg-embed              = "orggraph.pipeline.kg.embed:main"
+orggraph-eval-persona-voice    = "orggraph.pipeline.eval.persona_voice:main"
+orggraph-eval-qc               = "orggraph.pipeline.eval.qc:main"
+orggraph-eval-rq1              = "orggraph.pipeline.eval.rq1:main"
+orggraph-eval-run-rq1          = "orggraph.pipeline.eval.run_rq1:main"
+orggraph-eval-structure-search = "orggraph.pipeline.eval.persona_voice:main_structure_search"
+orggraph-figures               = "orggraph.pipeline.figures:main"
+orggraph-validate-bc3          = "orggraph.pipeline.validate.speech_acts_bc3:main"
+orggraph-validate-berkeley     = "orggraph.pipeline.validate.clusters_berkeley:main"
+orggraph-validate-rq3-set      = "orggraph.pipeline.validate.rq3_eval_set:main"
+orggraph-rq3                   = "orggraph.pipeline.eval.rq3.run_rq3:main"
+orggraph-eval-kg-chat-mapping  = "orggraph.pipeline.eval.kg_chat.build_mapping:main"
+orggraph-eval-kg-chat          = "orggraph.pipeline.eval.kg_chat.__main__:main"
+orggraph-eval-team-metrics     = "orggraph.pipeline.eval.kg_chat.team_metrics:main"
+orggraph-bench-llm             = "orggraph.pipeline.bench.llm:main"
+orggraph-bench-extraction      = "orggraph.pipeline.bench.email_extraction:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint.per-file-ignores]
+# Reproduction scripts run as __main__ with an order-sensitive import prologue.
+"scripts/**" = ["E402"]
+# Deferred imports in these modules avoid heavy or circular imports.
+"src/orggraph/agents/prompt_builder.py" = ["E402"]
+"src/orggraph/agents/prompt_judge.py" = ["E402"]
+"src/orggraph/pipeline/eval/persona_voice.py" = ["E402"]

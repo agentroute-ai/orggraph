@@ -1,0 +1,40 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.DS_Store
+
+# Local environment files (contains secrets like HF_TOKEN)
+.env
+.env.local
+
+# Local LLM router config (copy from litellm-config.example.yaml)
+litellm-config.yaml
+
+# Datasets: the small derived artifacts under datasets/enron/ are committed
+# (ground truth, hierarchy, clusters, personas, communication graph) so the
+# dashboard and RQ1 evaluation work out of the box. The raw corpus and the
+# large regenerated artifacts below are NOT committed; regenerate via the
+# pipeline (`make corpus`, `make email`, ...).
+datasets/enron/maildir/
+datasets/enron/raw/
+datasets/enron/processed/clean_emails.parquet
+datasets/enron/processed/umap_embeddings.npy
+datasets/enron/processed/*.npy
+datasets/enron/**/*.mbox
+
+# Local pipeline runtime artifacts
+logs/
+docker/neo4j/backups/
+
+# Auto-downloaded Neo4j plugins (apoc, gds)
+docker/neo4j/plugins/*.jar
+
+# Pipeline outputs (created on demand by pipeline modules)
+outputs/

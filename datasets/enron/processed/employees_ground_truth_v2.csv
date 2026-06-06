@@ -1,0 +1,104 @@
+name,folder,tier,level_numeric,title_raw
+John Arnold,arnold-j,VP,3.0,Vice President
+Harpreet Arora,arora-h,VP,3.0,Vice President
+Robert Badeer,badeer-r,Director,2.0,Director
+Eric Bass,bass-e,Employee,0.0,Trader
+Don Baughman,baughman-d,Employee,0.0,Trader
+Sally Beck,beck-s,Employee,0.0,Employee
+Robert Benson,benson-r,Director,2.0,Director
+Sandra Brawner,brawner-s,Director,2.0,Director
+Rick Buy,buy-r,Manager,1.0,Manager
+Mike Carson,carson-m,Employee,0.0,Employee
+Monika Causholli,causholli-m,Employee,0.0,Employee
+Shelley Corman,corman-s,VP,3.0,Vice President
+Sean Crandall,crandall-s,Director,2.0,Director
+Martin Cuilla,cuilla-m,Manager,1.0,Manager
+Jeff Dasovich,dasovich-j,Employee,0.0,Employee
+Craig Dean,dean-c,Employee,0.0,Trader
+David Delainey,delainey-d,C-Suite,6.0,CEO
+James Derrick,derrick-j,Manager,1.0,In House Lawyer
+Stacy Dickson,dickson-s,Employee,0.0,Employee
+Lindy Donoho,donoho-l,Employee,0.0,Employee
+Chris Dorland,dorland-c,Employee,0.0,Employee
+Frank Ermis,ermis-f,Director,2.0,Director
+Daren Farmer,farmer-d,Manager,1.0,Manager
+Mary Fischer,fischer-m,Employee,0.0,Employee
+John M. Forney,forney-j,Manager,1.0,Manager
+Drew Fossum,fossum-d,VP,3.0,Vice President
+Tracy Geaccone,geaccone-t,Employee,0.0,Employee
+Chris Germany,germany-c,Employee,0.0,Employee
+Douglas Gilbert-Smith,gilbertsmith-d,Manager,1.0,Manager
+Daron Giron,giron-d,Employee,0.0,Employee
+John Griffith,griffith-j,SVP,4.0,Managing Director
+Michael Grigsby,grigsby-m,Manager,1.0,Manager
+Mark Guzman,guzman-m,Employee,0.0,Trader
+Mark Haedicke,haedicke-m,SVP,4.0,Managing Director
+Mary C. Hain,hain-m,Manager,1.0,In House Lawyer
+Rod Hayslett,hayslett-r,VP,3.0,Vice President
+John Hodge,hodge-j,SVP,4.0,Managing Director
+Keith Holst,holst-k,Director,2.0,Director
+Stanley Horton,horton-s,C-Suite,6.0,President
+Kevin Hyatt,hyatt-k,Director,2.0,Director
+Dan Hyvl,hyvl-d,Employee,0.0,Employee
+Vince Kaminski,kaminski-v,Manager,1.0,Manager
+Steven Kean,kean-s,VP,3.0,Vice President
+Peter Keavey,keavey-p,Employee,0.0,Employee
+Kam Keiser,keiser-k,Employee,0.0,Employee
+Jeff King,king-j,Manager,1.0,Manager
+Louise Kitchen,kitchen-l,C-Suite,6.0,President
+Tori Kuykendall,kuykendall-t,Employee,0.0,Trader
+John Lavorato,lavorato-j,C-Suite,6.0,CEO
+Kenneth Lay,lay-k,C-Suite,6.0,CEO
+Matthew Lenhart,lenhart-m,Employee,0.0,Employee
+Andrew Lewis,lewis-a,Director,2.0,Director
+Michelle Lokay,lokay-m,Employee,0.0,Employee
+Teb Lokey,lokey-t,Manager,1.0,Manager
+Paul Lucci,lucci-p,Employee,0.0,Employee
+Michael Maggi,maggi-m,Director,2.0,Director
+Kay Mann,mann-k,Employee,0.0,Employee
+Thomas Martin,martin-t,VP,3.0,Vice President
+Lawrence May,may-l,Director,2.0,Director
+Danny McCarty,mccarty-d,VP,3.0,Vice President
+Bradley Mckay,mckay-b,Employee,0.0,Employee
+Jonathan Mckay,mckay-j,Director,2.0,Director
+Errol McLaughlin,mclaughlin-e,Employee,0.0,Employee
+Albert Meyers,meyers-a,Employee,0.0,Employee
+Matthew Motley,motley-m,Director,2.0,Director
+Scott Neal,neal-s,VP,3.0,Vice President
+Stephanie Panus,panus-s,Employee,0.0,Employee
+Susan Pereira,pereira-s,Employee,0.0,Employee
+Phillip Platter,platter-p,Employee,0.0,Employee
+Kevin Presto,presto-k,VP,3.0,Vice President
+Joe Quenet,quenet-j,Employee,0.0,Trader
+Jay Reitmeyer,reitmeyer-j,Employee,0.0,Employee
+Cooper Richey,richey-c,Manager,1.0,Manager
+Richard Ring,ring-r,Employee,0.0,Employee
+Kevin Ruscitti,ruscitti-k,Employee,0.0,Trader
+Elizabeth Sager,sager-e,Employee,0.0,Employee
+Eric Saibi,saibi-e,Employee,0.0,Trader
+Holden Salisbury,salisbury-h,Employee,0.0,Employee
+Richard Sanders,sanders-r,VP,3.0,Vice President
+Diana Scholtes,scholtes-d,Employee,0.0,Trader
+Jim Schwieger,schwieger-j,Employee,0.0,Trader
+Cara Semperger,semperger-c,Employee,0.0,Employee
+Jeffrey Shankman,shankman-j,C-Suite,6.0,President
+Richard Shapiro,shapiro-r,VP,3.0,Vice President
+Hunter Shively,shively-h,VP,3.0,Vice President
+Jeffery Skilling,skilling-j,C-Suite,6.0,CEO
+Ryan Slinger,slinger-r,Employee,0.0,Trader
+Geir Solberg,solberg-g,Employee,0.0,Employee
+Theresa Staab,staab-t,Employee,0.0,Employee
+Carol St. Clair,stclair-c,Manager,1.0,In House Lawyer
+James Steffes,steffes-j,VP,3.0,Vice President
+Joe Stepenovitch,stepenovitch-j,VP,3.0,Vice President
+Geoffery Storey,storey-g,Director,2.0,Director
+Fletcher Sturm,sturm-f,VP,3.0,Vice President
+Mike Swerzbin,swerzbin-m,Employee,0.0,Trader
+Kate Symes,symes-k,Employee,0.0,Employee
+Mark Taylor,taylor-m,Employee,0.0,Employee
+Jane Tholt,tholt-j,VP,3.0,Vice President
+Judy Townsend,townsend-j,Employee,0.0,Employee
+Barry Tycholiz,tycholiz-b,VP,3.0,Vice President
+Lawrence Greg Whalley,whalley-g,C-Suite,6.0,President
+Andy Zipper,zipper-a,VP,3.0,Vice President
+John Zufferli,zufferli-j,Employee,0.0,Employee

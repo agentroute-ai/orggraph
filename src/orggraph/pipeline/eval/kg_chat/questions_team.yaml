@@ -1,0 +1,160 @@
+# Team-chat eval — 10 questions designed for the A2A cascade flow.
+#
+# Each question asks for multi-perspective input that an honest answer
+# requires consulting >1 colleague. Two GT layers:
+#   - `grading`: answer-level (existing graders).
+#   - `team_grading`: routing (expected_initial) + cascade (expected_targets,
+#     keyed by domain category). Used by the team metrics scorer to compute
+#     routing_hit / dispatch_precision / dispatch_coverage.
+
+version: 2
+generated_at: "2026-05-25"
+tier: team
+n_questions: 10
+description: >
+  Multi-perspective workplace questions where the right answer
+  requires consulting >=2 colleagues from different domains.
+  Authored to test the A2A cascade flow specifically: routing
+  (correct initial pick), dispatch (right colleagues consulted),
+  and synthesis (integrated final answer).
+
+questions:
+
+  - id: T1
+    category: multi_domain_consultation
+    question: "I'm consolidating the trading desk under one head. Talk to the gas-side lead AND the power-side lead in parallel — who's the retention risk on each side?"
+    expected_tools: [find_topic_collaborators, get_pair_signals, get_org_chart]
+    grading:
+      kind: judge
+      prompt: "Does the answer name SPECIFIC retention risks and SPECIFIC flight risks, with at least one named person per side (gas trading and power trading)?"
+    team_grading:
+      expected_initial: [john_lavorato, jeffrey_shankman, louise_kitchen, lawrence_greg_whalley]
+      expected_targets:
+        gas_side: [michael_grigsby, keith_holst, phillip_allen, barry_tycholiz, john_forney]
+        power_side: [robert_benson, phillip_platter, eric_linder, kevin_presto, paul_thomas]
+      min_categories_covered: 2
+
+  - id: T2
+    category: regulatory_stakeholder_mapping
+    question: "I'm drafting a sensitive memo about California regulatory action. Find whoever's closest to that beat and have them tell me who else needs to be in the room before this goes out."
+    expected_tools: [find_topic_collaborators, find_person, get_pair_signals]
+    grading:
+      kind: judge
+      prompt: "Does the answer organize a distribution list covering at least TWO of these functions: legal, government affairs, trading/operations? Specific names required."
+    team_grading:
+      expected_initial: [jeff_dasovich, mary_c_hain, james_steffes]
+      expected_targets:
+        legal: [mark_haedicke, james_derrick, richard_sanders, marie_heard, stacy_dickson]
+        gov_affairs: [james_steffes, richard_shapiro, steven_kean, mary_c_hain]
+        trading_or_ops: [john_lavorato, david_delainey, michael_grigsby, phillip_platter, drew_fossum]
+      min_categories_covered: 2
+
+  - id: T3
+    category: succession_with_multi_signal
+    question: "Vince Kaminski runs risk for us. If he were out for six months, who's the real backup? I want someone (a) already active on risk topics, (b) trusted by senior people, and (c) not buried under another desk. Talk it through with whoever else knows risk before naming a candidate."
+    expected_tools: [find_topic_collaborators, get_pair_signals, get_centrality]
+    grading:
+      kind: name_in_set
+      k: 1
+      names: [Mark Haedicke, Sally Beck, Drew Fossum, James Steffes, Dutch Quigley]
+    team_grading:
+      expected_initial: [vince_kaminski, rick_buy, mark_haedicke, sally_beck]
+      expected_targets:
+        risk_specialists: [mark_haedicke, sally_beck, drew_fossum, james_steffes, dutch_quigley, kam_keiser]
+      min_categories_covered: 1
+
+  - id: T4
+    category: cross_functional_audit
+    question: "We're being audited on West Coast power positions. Get a trading read from whoever runs that book AND a regulatory read from whoever owns California. I need both perspectives before talking to the auditor."
+    expected_tools: [find_topic_collaborators, find_person, get_pair_signals]
+    grading:
+      kind: judge
+      prompt: "Does the answer combine a trading-position perspective AND a regulatory perspective on the West Coast power book? Specific names from each side?"
+    team_grading:
+      expected_initial: [john_lavorato, robert_benson, jeff_dasovich, mary_c_hain]
+      expected_targets:
+        trading_west: [phillip_platter, robert_benson, eric_linder, kevin_presto, john_lavorato]
+        california_regulatory: [jeff_dasovich, mary_c_hain, james_steffes]
+      min_categories_covered: 2
+
+  - id: T5
+    category: hiring_judgment
+    question: "I'm thinking of promoting John Arnold to VP of trading. Talk to someone who works with him directly AND someone senior to him. Honest reads only — I want the warts and the strengths."
+    expected_tools: [get_person, get_org_chart, get_pair_signals]
+    grading:
+      kind: judge
+      prompt: "Does the answer combine a peer-level / direct-report view AND a senior-level view of John Arnold? Specific evidence, not just opinion."
+    team_grading:
+      expected_initial: [john_lavorato, jeffrey_shankman, louise_kitchen]
+      expected_targets:
+        peers_or_reports: [phillip_allen, barry_tycholiz, scott_neal, frank_vickers, hunter_shively]
+        senior_to_arnold: [john_lavorato, lawrence_greg_whalley, jeffrey_skilling]
+      min_categories_covered: 2
+
+  - id: T6
+    category: communication_warmth
+    question: "I'm drafting a sensitive memo to Ken Lay. Find whoever has the warmest tone with him and ask them how I should frame it."
+    expected_tools: [get_pair_signals, run_sql]
+    grading:
+      kind: name_in_set
+      k: 1
+      names: [John Lavorato, Mike McConnell, David Delainey]
+    team_grading:
+      expected_initial: [john_lavorato, mike_mcconnell, david_delainey]
+      expected_targets:
+        warmest_to_lay: [john_lavorato, mike_mcconnell, david_delainey]
+      min_categories_covered: 1
+
+  - id: T7
+    category: crisis_diagnosis
+    question: "California margins collapsed last quarter and Ken Lay wants answers in 24 hours. Find me whoever owns California regulatory AND whoever owns the West Coast trading book — both in parallel. I need a unified read by tomorrow."
+    expected_tools: [find_topic_collaborators, find_person, get_pair_signals]
+    grading:
+      kind: judge
+      prompt: "Does the answer give BOTH a regulatory cause AND a trading-book exposure read for the California margin collapse? Both with specific people involved?"
+    team_grading:
+      expected_initial: [jeff_dasovich, mary_c_hain, john_lavorato, steven_kean]
+      expected_targets:
+        regulatory: [jeff_dasovich, mary_c_hain, james_steffes, steven_kean]
+        trading_west: [john_lavorato, phillip_platter, robert_benson, michael_grigsby]
+      min_categories_covered: 2
+
+  - id: T8
+    category: shadow_influence
+    question: "Find me the person who actually shapes trading decisions at Enron — not by org chart, by network reality. Verify with someone on the trading floor before naming."
+    expected_tools: [get_centrality, find_topic_collaborators, get_person]
+    grading:
+      kind: judge
+      prompt: "Does the answer identify ONE specific person (with a name, not 'the head of trading') and justify their influence with network / communication evidence, NOT just by org chart position?"
+    team_grading:
+      expected_initial: [john_lavorato, lawrence_greg_whalley, louise_kitchen, jeffrey_shankman]
+      expected_targets:
+        trading_floor: [john_arnold, phillip_allen, barry_tycholiz, scott_neal, frank_vickers]
+      min_categories_covered: 1
+
+  - id: T9
+    category: bottleneck_diagnosis
+    question: "John Lavorato is drowning in requests but commitments back from his team are weak. Find out who the biggest offender is — someone who keeps asking but rarely delivers. Verify with anyone close enough to Lavorato to confirm."
+    expected_tools: [get_pair_signals, run_sql, find_topic_collaborators]
+    grading:
+      kind: contains
+      value: David Delainey
+    team_grading:
+      expected_initial: [john_lavorato, louise_kitchen, lawrence_greg_whalley, david_delainey]
+      expected_targets:
+        close_to_lavorato: [louise_kitchen, david_delainey, jeffrey_shankman, lawrence_greg_whalley]
+      min_categories_covered: 1
+
+  - id: T10
+    category: cross_topic_attendee
+    question: "I need ONE person who can speak to both California regulatory AND the trading desk in the same meeting. Have whoever's closest to California regulatory consult someone on the trading side before naming."
+    expected_tools: [find_topic_collaborators, find_person, get_pair_signals]
+    grading:
+      kind: name_in_set
+      k: 1
+      names: [Steven Kean, John Lavorato, David Delainey, James Steffes, Richard Shapiro, Vince Kaminski, Mike McConnell]
+    team_grading:
+      expected_initial: [jeff_dasovich, mary_c_hain, james_steffes]
+      expected_targets:
+        trading_side: [john_lavorato, michael_grigsby, phillip_platter, robert_benson, barry_tycholiz]
+      min_categories_covered: 1

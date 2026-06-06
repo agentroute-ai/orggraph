@@ -1,0 +1,19 @@
+{
+  "f1": {
+    "pair_accuracy": 0.44412607449856734,
+    "coverage": 0.7220630372492837,
+    "correct": 155,
+    "wrong_order": 97,
+    "missing": 97,
+    "total_pairs": 349,
+    "precision": 1.0,
+    "recall": 0.44412607449856734,
+    "f1": 0.44412607449856734
+  },
+  "spearman_rho": 0.25060699536024983,
+  "n_communities": 7,
+  "n_nodes": 145,
+  "n_edges": 2036,
+  "email_limit": null,
+  "internal_emails": 38525
+}

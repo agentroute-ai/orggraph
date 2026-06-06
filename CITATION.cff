@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "OrgGraph: Unsupervised Organizational Knowledge Extraction and Agent Simulation from Email Corpora"
+abstract: >-
+  OrgGraph is a research codebase for recovering organizational structure from
+  email metadata and content without supervision, evaluating multi-agent
+  dialogue naturalness against single-LLM baselines, and comparing
+  graph-structured (GraphRAG) versus vector-only retrieval for agent
+  communication coherence. The repository contains the full pipeline (corpus
+  filter, email embedding, LLM signal extraction, project/topic clustering,
+  knowledge-graph construction, persona enrichment, RQ1 evaluation) and the
+  multi-agent simulation runtime used for the RQ2 and RQ3 studies.
+authors:
+  - family-names: Sacco
+    given-names: Riccardo
+    affiliation: "Università della Svizzera italiana (USI), Lugano"
+version: "0.1.0"
+date-released: "2026-05-06"
+repository-code: "https://github.com/agentroute-ai/orggraph"
+license: MIT
+keywords:
+  - organizational-knowledge-extraction
+  - email-mining
+  - knowledge-graphs
+  - graph-rag
+  - multi-agent-systems
+  - large-language-models
+  - enron-corpus
+  - msc-thesis
+references:
+  - type: thesis
+    title: "OrgGraph: Unsupervised Organizational Knowledge Extraction and Agent Simulation from Email Corpora"
+    authors:
+      - family-names: Sacco
+        given-names: Riccardo
+    institution:
+      name: "Università della Svizzera italiana (USI)"
+    thesis-type: "Master's thesis"
+    department: "Faculty of Informatics"
+    year: 2026
+    notes: "Add Zenodo or USI library DOI here once defended."

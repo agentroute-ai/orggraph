@@ -1,0 +1,9 @@
+# Dependency manifest for Streamlit Community Cloud.
+#
+# The static dashboard needs the orggraph package (its cached data loaders in
+# dashboard/lib/data.py import orggraph.config / orggraph.data) plus the
+# dashboard extras (streamlit, plotly, pyvis). Installing the package this way
+# pulls its pinned core dependencies from pyproject.toml.
+#
+# For local development use `make install` / `make dashboard` instead.
+.[dashboard]

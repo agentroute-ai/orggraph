@@ -1,0 +1,9 @@
+# Streamlit configuration for the OrgGraph explorer.
+# Used by both local `make dashboard` runs and the Streamlit Community Cloud deploy.
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#2b6cb0"

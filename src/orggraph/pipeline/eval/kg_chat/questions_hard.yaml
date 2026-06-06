@@ -1,0 +1,189 @@
+# KG-Chat hard-tier eval — human-voice multi-tool questions.
+#
+# 10 questions phrased the way a real employee at Enron would actually
+# ask them: about escalation paths, coverage gaps, communication styles,
+# bottlenecks. No metric jargon. Each one still requires 3+ tool calls
+# to answer correctly because the agent has to discover the underlying
+# data structure on its own.
+#
+# GT computed from live KG / pair_signals on 2026-05-24.
+
+version: 2
+generated_at: "2026-05-25"
+tier: hard
+n_questions: 14
+description: >
+  Multi-tool pipeline questions phrased as realistic workplace questions.
+  Each requires composing 3+ tools to answer; the agent must translate
+  human framing ("who do I escalate to", "who covers their work") into
+  the right tool sequence.
+
+  Version 2 (2026-05-25): appends K1-K4 ("killer" questions) engineered
+  to be mechanically impossible for naive vector RAG. Each Ki tests a
+  distinct RAG-failure mode (centrality, temporal sentiment, cross-
+  direction asymmetry, multi-criterion stacking) where the answer is
+  not present in any single retrievable passage.
+
+questions:
+
+  - id: P1
+    category: onboarding_navigation
+    question: "I'm new to John Arnold's team. Who's his manager, and who else reports to that person? I'd like to know who I'm part of."
+    expected_tools: [get_person, get_org_chart]
+    # Arnold reports to John Lavorato; Lavorato has 36 direct reports.
+    grading: {kind: contains, value: "John Lavorato"}
+
+  - id: P2
+    category: escalation
+    question: "I need to escalate a trading desk issue. I'd rather not bother the CEO if there's a senior person who actively works on trading day-to-day. Who should I go to?"
+    expected_tools: [find_topic_collaborators, get_centrality, get_person]
+    # Any senior person actively working on trading qualifies. Top candidates:
+    # John Lavorato, Louise Kitchen (both tier 4 high composite); Kevin Hyatt,
+    # Michael Grigsby, Mike McConnell (tier 4 active); Chris Germany (tier 4,
+    # Pipeline Trading Manager with 519 trading-topic emails — operational
+    # head); Greg Whalley (alt spelling Lawrence Greg Whalley).
+    grading:
+      kind: name_in_set
+      k: 1
+      names: [John Lavorato, Louise Kitchen, Kevin Hyatt, Michael Grigsby,
+              Mike McConnell, Greg Whalley, Lawrence Greg Whalley,
+              Chris Germany, John Arnold, Mark Taylor]
+
+  - id: P3
+    category: domain_expertise
+    question: "Jeff Dasovich seems to be the main person on California regulatory work. Who does he work most closely with on that — the people we'd loop in for a California-related discussion?"
+    expected_tools: [find_topic_collaborators, get_pair_signals]
+    # Dasovich's top California co-workers by email volume on California topics:
+    # Richard Shapiro (43), Steven Kean (23), James Steffes (22).
+    grading:
+      kind: name_in_set
+      k: 2
+      names: [Richard Shapiro, Steven Kean, James Steffes, David Delainey, John Lavorato]
+
+  - id: P4
+    category: succession
+    question: "Vince Kaminski covers risk for us. If he were out for a long stretch, who else actively works on risk topics? I need a backup contact."
+    expected_tools: [find_topic_collaborators]
+    # Top people on risk topic excluding Kaminski: Mark Haedicke, Sally Beck,
+    # Drew Fossum, James Steffes, Dutch Quigley.
+    grading:
+      kind: name_in_set
+      k: 1
+      names: [Mark Haedicke, Sally Beck, Drew Fossum, James Steffes, Dutch Quigley]
+
+  - id: P5
+    category: bridging
+    question: "Trading and Risk feel like two separate worlds at Enron. Is there anyone who works on both — someone we could bring in to bridge a conversation across them?"
+    expected_tools: [find_topic_collaborators, run_cypher]
+    # People active on both trading and risk topics: John Lavorato, Kevin Hyatt,
+    # Mark Taylor, Mark Haedicke, Vince Kaminski, John Arnold, Sally Beck, etc.
+    grading:
+      kind: name_in_set
+      k: 1
+      names: [John Lavorato, Kevin Hyatt, Mark Taylor, Mark Haedicke,
+              Vince Kaminski, John Arnold, Dutch Quigley, Sally Beck,
+              Mike McConnell, Lynn Blair]
+
+  - id: P6
+    category: communication_style
+    question: "Sara Shackleton sends me a lot of requests but rarely commits to anything herself. Is that her style with everyone, or is something off about how she's dealing with me?"
+    expected_tools: [get_pair_signals, run_sql]
+    # Across her top recipients, her request count consistently dwarfs her
+    # commit count: Bailey 161/28, Panus 141/19, Taylor 117/19, Jones 108/14,
+    # Heard 91/19. Consistent pattern. The agent should report that this is
+    # a stable style, not a singled-out behavior.
+    grading: {kind: judge, prompt: "Does the answer convey that Sara Shackleton sends many more requests than commits across multiple recipients, indicating a consistent personal style rather than a targeted behavior toward one person?"}
+
+  - id: P7
+    category: stakeholder_mapping
+    question: "I'm drafting a sensitive memo for Kenneth Lay. Whose emails to him have the warmest tone? I want to model the framing on whoever Lay responds well to."
+    expected_tools: [get_pair_signals, run_sql]
+    # Top senders to Lay by mean_sentiment (n_emails >= 3): John Lavorato (0.64),
+    # Mike McConnell (0.42), David Delainey (0.12).
+    grading:
+      kind: name_in_set
+      k: 1
+      names: [John Lavorato, Mike McConnell, David Delainey]
+
+  - id: P8
+    category: bottleneck_diagnosis
+    question: "We have a deal that's been stuck for weeks. John Lavorato keeps getting requests on it but the commitments back to him are way below what he's asking for. Who's the biggest offender — who sends Lavorato the most requests with the fewest commits back?"
+    expected_tools: [run_sql, get_pair_signals]
+    # Highest request_commit_ratio TO Lavorato (cross-direction):
+    # David Delainey (10.0, 40 requests), Louise Kitchen (6.17, 37 requests).
+    grading: {kind: contains, value: "David Delainey"}
+
+  - id: P9
+    category: org_scope
+    question: "I'm scoping the impact of a potential reorg below John Lavorato. How many people end up under him in the KG, directly or one level down? Is his org tall or flat?"
+    expected_tools: [get_org_chart]
+    # Lavorato has 36 direct reports; the KG has no deeper structure under
+    # them (reports-of-reports count = 0). So the answer is 36, flat.
+    grading: {kind: integer, value: 36, tolerance: 3}
+
+  - id: P10
+    category: cross_topic_intersection
+    question: "I want to find the right person to attend both my California regulatory meeting and a trading desk briefing. Who's active on both?"
+    expected_tools: [find_topic_collaborators, run_cypher]
+    # People active on both California-related and trading-related topics.
+    # From pre-computed: Steven Kean appears on both; Lavorato also overlaps;
+    # David Delainey and John Arnold on trading; Dasovich on California only.
+    # Accept any cross-topic collaborator from the trading+california overlap.
+    grading:
+      kind: name_in_set
+      k: 1
+      names: [Steven Kean, John Lavorato, David Delainey, James Steffes,
+              Richard Shapiro, Vince Kaminski]
+
+  # --- Killer questions (RQ3): engineered to break naive vector RAG -----------
+  # Each Ki tests a distinct RAG-failure mode where the answer cannot be
+  # retrieved from any single passage. Authored 2026-05-25.
+
+  - id: K1
+    category: shadow_influence
+    question: "I need to know who actually shapes trading decisions at Enron — not by org chart, by network reality. Find me someone whose title doesn't say 'head of trading' but who's de-facto influential based on how trading conversations actually flow."
+    expected_tools: [get_centrality, find_topic_collaborators, get_person]
+    # Requires identifying high-centrality non-titled people via the trading
+    # topic subgraph. No single email gives the answer. RAG can't compute
+    # centrality. GraphRAG composes find_topic_collaborators (trading) +
+    # get_centrality (rank by betweenness) + get_person (verify title).
+    grading:
+      kind: judge
+      prompt: "Does the answer identify a specific person and justify their influence with network/centrality evidence (degree, betweenness, eigenvector, or comparable structural signal) — not just by quoting one email or by naming the obvious CEO?"
+
+  - id: K2
+    category: tone_shift
+    question: "I want to find a working relationship that's gone cold at Enron. Show me a pair where the early emails were warm but the later ones got clipped or frosty. Someone who's clearly cooled on the other person."
+    expected_tools: [run_sql, get_pair_signals]
+    # Requires temporal sentiment evolution per pair. RAG can read individual
+    # emails but can't compare early vs. late sentiment for the same pair.
+    # GraphRAG uses run_sql on embeddings_email joined to senders/recipients
+    # with sentiment binned over time.
+    grading:
+      kind: judge
+      prompt: "Does the answer name a specific pair of people and provide quantitative evidence (sentiment scores binned by time, dated examples, or a clear before/after comparison) that the relationship between them deteriorated — not just that one email is negative or that one person seems unhappy?"
+
+  - id: K3
+    category: reciprocity_pattern
+    question: "I'm scoping who's politically smart at Enron. Find me someone who consistently sends senior people more requests than they commit to — basically asking a lot, delivering little. Pick a clear example and show me the breakdown."
+    expected_tools: [run_sql, get_pair_signals]
+    # Requires cross-direction request_count vs commit_count signal aggregation.
+    # Specifically: high request_count_directed_at(senior) / commit_count_directed_at(senior).
+    # RAG can find request emails but can't aggregate the ratio across many.
+    grading:
+      kind: judge
+      prompt: "Does the answer name a specific person and quantify their request-to-commit ratio toward at least one senior counterpart — using actual counts from pair_signals (e.g., 'X sent 40 requests, only 4 commits') — not just a vague characterization of their style?"
+
+  - id: K4
+    category: multi_signal_succession
+    question: "Vince Kaminski runs risk for us. If he were out for six months, who's the real backup? I want someone (a) already active on risk topics this quarter, (b) whose tone with senior people suggests they're actually trusted, and (c) isn't already buried under another desk. Show me your candidate AND your reasoning."
+    expected_tools: [find_topic_collaborators, get_pair_signals, run_sql]
+    # Multi-criterion constraint stack: topic activity + trust signal + bandwidth.
+    # Same canonical candidate set as P4 (succession). Pure RAG can plausibly
+    # address (a) by finding risk-related emails but cannot compute (b) trust-
+    # by-sentiment or (c) bandwidth without aggregating across all the person's
+    # email pairs.
+    grading:
+      kind: name_in_set
+      k: 1
+      names: [Mark Haedicke, Sally Beck, Drew Fossum, James Steffes, Dutch Quigley]
