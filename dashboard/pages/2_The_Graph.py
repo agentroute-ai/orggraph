@@ -220,8 +220,8 @@ with tab_kg:
         cc = st.columns([2, 2, 1])
         sel_n = cc[0].multiselect("Node types", NTYPES, default=["Person", "Team", "Function"])
         sel_e = cc[1].multiselect("Edge types", ETYPES, default=["REPORTS_TO", "MEMBER_OF"])
-        cap = cc[2].slider("Max nodes", 40, G.number_of_nodes(),
-                           min(160, G.number_of_nodes()), step=20)
+        cap = cc[2].slider("Max nodes", 20, G.number_of_nodes(),
+                           min(60, G.number_of_nodes()), step=10)
 
         H = nx.DiGraph()
         for n, d in G.nodes(data=True):
@@ -247,23 +247,56 @@ with tab_kg:
                 f"relationships &nbsp;&nbsp; {legend}", unsafe_allow_html=True,
             )
             try:
+                import json as _json
                 import streamlit.components.v1 as components
                 from pyvis.network import Network
 
-                net = Network(height="600px", width="100%", directed=True,
-                              bgcolor="#ffffff", font_color="#0b1220",
-                              cdn_resources="in_line")
-                net.barnes_hut(spring_length=120)
+                # Darker borders per node type, Neo4j-style.
+                BORDER = {"Person": "#0f7a37", "Team": "#6b21a8",
+                          "ExternalEntity": "#1e4e8c", "Function": "#b45309"}
+
+                net = Network(height="640px", width="100%", directed=True,
+                              bgcolor="#ffffff", cdn_resources="in_line")
+                net.set_options(_json.dumps({
+                    "nodes": {
+                        "shape": "dot",
+                        "borderWidth": 2,
+                        "font": {"size": 15, "face": "Helvetica Neue, Arial, sans-serif",
+                                 "color": "#2b2b2b"},
+                        "scaling": {"min": 16, "max": 48,
+                                    "label": {"enabled": True, "min": 13, "max": 24}},
+                    },
+                    "edges": {
+                        "color": {"color": "#A5ABB6", "highlight": "#16a34a",
+                                  "hover": "#16a34a", "opacity": 0.8},
+                        "arrows": {"to": {"enabled": True, "scaleFactor": 0.55}},
+                        "smooth": {"enabled": True, "type": "dynamic"},
+                        "font": {"size": 11, "color": "#7f8a99", "strokeWidth": 5,
+                                 "strokeColor": "#ffffff", "align": "middle"},
+                        "width": 1.4,
+                    },
+                    "physics": {
+                        "solver": "forceAtlas2Based",
+                        "forceAtlas2Based": {"gravitationalConstant": -60,
+                                             "centralGravity": 0.015, "springLength": 130,
+                                             "springConstant": 0.08, "damping": 0.55,
+                                             "avoidOverlap": 0.8},
+                        "stabilization": {"iterations": 220},
+                        "minVelocity": 0.75,
+                    },
+                    "interaction": {"hover": True, "tooltipDelay": 120},
+                }))
                 for n, d in H.nodes(data=True):
                     nt = d.get("ntype", "?")
-                    tip = f"{d.get('name', '?')} ({nt})"
+                    tip = f"{d.get('name', '?')} · {nt}"
                     if d.get("title"):
-                        tip += f" - {d['title']}"
+                        tip += f" · {d['title']}"
                     net.add_node(n, label=d.get("name", "?"), title=tip,
-                                 color=COLOR.get(nt, "#9ca3af"),
-                                 size=10 + 1.4 * H.degree(n), shape="dot")
+                                 color={"background": COLOR.get(nt, "#9ca3af"),
+                                        "border": BORDER.get(nt, "#6b7280")},
+                                 value=int(H.degree(n)) + 1)
                 for u, v, d in H.edges(data=True):
-                    net.add_edge(u, v, title=d.get("etype", ""), color="#cbd5e1")
-                components.html(net.generate_html(notebook=False), height=620, scrolling=True)
+                    net.add_edge(u, v, label=d.get("etype", ""))
+                components.html(net.generate_html(notebook=False), height=680, scrolling=True)
             except Exception as exc:  # noqa: BLE001
                 st.error(f"Could not render the graph: {exc}")
