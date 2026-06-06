@@ -24,35 +24,50 @@ from lib.header import render_header
 
 @st.cache_data(show_spinner=False)
 def _emails_for_person(name: str) -> pd.DataFrame:
-    """Return all emails where `name` appears as sender or recipient.
+    """Return the emails involving `name`, used for the per-person drill-downs.
 
-    Needs the full ``clean_emails.parquet`` (Stage 0 output), which is not
-    shipped with the repo. When it is absent (e.g. the public/static
-    deployment), return an empty frame so the per-person email / project /
-    topic drill-downs degrade gracefully. Regenerate the parquet with
-    ``make corpus`` to enable them.
+    Reads whichever email table is available, in order:
+      1. ``clean_emails.parquet`` — the full Stage 0 output (Path B / full
+         reproduction). If it carries ``recipients_resolved`` both sent and
+         received messages are returned.
+      2. ``persona_emails.parquet`` — a slim, committed file (email_id, date,
+         subject, sender_resolved; no bodies) shipped so the static deployment
+         works without the 85 MB corpus. Sender side only.
+    Returns an empty frame if neither is present.
     """
     cols = ["date", "direction", "from", "recipients", "subject", "email_id"]
     parquet = PROCESSED / "clean_emails.parquet"
     if not parquet.is_file():
+        parquet = PROCESSED / "persona_emails.parquet"
+    if not parquet.is_file():
         return pd.DataFrame(columns=cols)
-    df = pd.read_parquet(
-        parquet,
-        columns=[
-            "email_id", "date", "subject",
-            "sender_resolved", "recipients_resolved",
-        ],
-    )
+
+    import pyarrow.parquet as pq
+
+    available = set(pq.ParquetFile(parquet).schema.names)
+    want = [c for c in ("email_id", "date", "subject", "sender_resolved") if c in available]
+    has_recipients = "recipients_resolved" in available
+    if has_recipients:
+        want.append("recipients_resolved")
+    df = pd.read_parquet(parquet, columns=want)
+
     is_sender = df["sender_resolved"] == name
-    is_recipient = df["recipients_resolved"].apply(
-        lambda r: name in r if r is not None and len(r) > 0 else False
-    )
+    if has_recipients:
+        is_recipient = df["recipients_resolved"].apply(
+            lambda r: name in r if r is not None and len(r) > 0 else False
+        )
+    else:
+        # Slim file has no recipient column: show the person's sent mail only.
+        is_recipient = pd.Series(False, index=df.index)
     mask = is_sender | is_recipient
     sub = df.loc[mask].copy()
     sub["direction"] = is_sender[mask].map({True: "sent", False: "received"})
-    sub["recipients"] = sub["recipients_resolved"].apply(
-        lambda r: ", ".join(r) if r is not None else ""
-    )
+    if has_recipients:
+        sub["recipients"] = sub["recipients_resolved"].apply(
+            lambda r: ", ".join(r) if r is not None else ""
+        )
+    else:
+        sub["recipients"] = ""
     out = sub[[
         "date", "direction", "sender_resolved", "recipients", "subject", "email_id",
     ]].rename(columns={"sender_resolved": "from"})
