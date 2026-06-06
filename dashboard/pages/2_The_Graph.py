@@ -216,6 +216,8 @@ with tab_kg:
         ETYPES = ["REPORTS_TO", "MEMBER_OF", "COMMUNICATES_WITH"]
         COLOR = {"Person": "#16a34a", "Team": "#9333ea",
                  "ExternalEntity": "#2b6cb0", "Function": "#f59e0b"}
+        EDGE_COLOR = {"REPORTS_TO": "#dc2626", "MEMBER_OF": "#0ea5e9",
+                      "COMMUNICATES_WITH": "#94a3b8"}
 
         cc = st.columns([2, 2, 1])
         sel_n = cc[0].multiselect("Node types", NTYPES, default=["Person", "Team", "Function"])
@@ -242,9 +244,14 @@ with tab_kg:
                 f"<span style='color:{COLOR[t]};font-size:18px'>●</span> {t}"
                 for t in sel_n if t in COLOR
             )
+            elegend = "  ".join(
+                f"<span style='color:{EDGE_COLOR[t]};font-weight:700'>—</span> {t}"
+                for t in sel_e if t in EDGE_COLOR
+            )
             st.markdown(
                 f"**{H.number_of_nodes()}** nodes · **{H.number_of_edges()}** "
-                f"relationships &nbsp;&nbsp; {legend}", unsafe_allow_html=True,
+                f"relationships &nbsp;&nbsp; {legend} &nbsp;&nbsp; {elegend}",
+                unsafe_allow_html=True,
             )
             try:
                 import json as _json
@@ -271,8 +278,9 @@ with tab_kg:
                                   "hover": "#16a34a", "opacity": 0.8},
                         "arrows": {"to": {"enabled": True, "scaleFactor": 0.55}},
                         "smooth": {"enabled": True, "type": "dynamic"},
-                        "font": {"size": 11, "color": "#7f8a99", "strokeWidth": 5,
-                                 "strokeColor": "#ffffff", "align": "middle"},
+                        "font": {"size": 15, "color": "#374151", "strokeWidth": 7,
+                                 "strokeColor": "#ffffff", "align": "middle",
+                                 "face": "Helvetica Neue, Arial, sans-serif"},
                         "width": 1.4,
                     },
                     "physics": {
@@ -296,7 +304,9 @@ with tab_kg:
                                         "border": BORDER.get(nt, "#6b7280")},
                                  value=int(H.degree(n)) + 1)
                 for u, v, d in H.edges(data=True):
-                    net.add_edge(u, v, label=d.get("etype", ""))
+                    et = d.get("etype", "")
+                    net.add_edge(u, v, label=et, title=et,
+                                 color=EDGE_COLOR.get(et, "#A5ABB6"))
                 components.html(net.generate_html(notebook=False), height=680, scrolling=True)
             except Exception as exc:  # noqa: BLE001
                 st.error(f"Could not render the graph: {exc}")
