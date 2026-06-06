@@ -1,0 +1,45 @@
+{
+  "scenario_name": "positioning_ferc_california_inquiry",
+  "condition": "multi_agent",
+  "mean_score": 4.8,
+  "scores": {
+    "speaker_consistency": {
+      "score": 5,
+      "justification": "Each turn is signed with the correct name (Jim/James Steffes, Mary/Mary C. Hain) and reads as authored by the named persona without self-addressing or confusion."
+    },
+    "persona_fidelity": {
+      "score": 5,
+      "justification": "Steffes demonstrates moderately verbose strategic updates and coordination style; Hain displays action-oriented compliance focus with clear review requests and regulatory vocabulary appropriate to her role."
+    },
+    "scenario_grounding": {
+      "score": 4,
+      "justification": "Dialogue stays on FERC data request topic with correct deadline and California market context, but references 'Jeff and Paul' as action item recipients without these being listed participants."
+    },
+    "conversational_coherence": {
+      "score": 5,
+      "justification": "Turns build logically on prior exchanges: Steffes broadcasts, Hain responds with compliance inputs, Steffes refines action items, Hain confirms and provides contingency\u2014all commitments referenced consistently."
+    },
+    "naturalness": {
+      "score": 5,
+      "justification": "Reads as plausible internal organizational correspondence with appropriate formality, varied sentence structure, realistic scheduling discussions, and natural delegation of tasks across functions."
+    }
+  },
+  "turn_flags": [
+    {
+      "turn_id": 0,
+      "issue": "hallucination",
+      "detail": "Addresses 'Jeff and Paul' by name for action items; these individuals are not listed participants."
+    },
+    {
+      "turn_id": 2,
+      "issue": "hallucination",
+      "detail": "Again references 'Jeff and Paul' for sub-question sort; not listed participants."
+    },
+    {
+      "turn_id": 4,
+      "issue": "hallucination",
+      "detail": "Lists 'Jeff and Paul's preliminary sub-question sort' as Friday deliverable; not listed participants."
+    }
+  ],
+  "overall_summary": "The dialogue demonstrates strong internal consistency and natural organizational correspondence, with both personas writing convincingly within their described roles and expertise. The primary issue is the repeated invocation of 'Jeff and Paul' as named recipients for action items despite their absence from the listed participants\u2014this creates a minor grounding inconsistency across three turns but does not undermine the dialogue's overall coherence or plausibility."
+}

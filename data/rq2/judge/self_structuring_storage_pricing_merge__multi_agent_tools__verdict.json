@@ -1,0 +1,29 @@
+{
+  "scenario_name": "self_structuring_storage_pricing_merge",
+  "condition": "multi_agent_tools",
+  "mean_score": 5.0,
+  "scores": {
+    "speaker_consistency": {
+      "score": 5,
+      "justification": "Danny consistently signs as 'Dan' and Drew as 'df', matching their persona conventions with no self-referential errors or name confusion."
+    },
+    "persona_fidelity": {
+      "score": 5,
+      "justification": "Danny writes in a direct, concise manner with minimal hedging; Drew provides legal analysis with appropriate regulatory vocabulary (FERC, NNG, TW, tariff obligations) while maintaining casual informality in his sign-off."
+    },
+    "scenario_grounding": {
+      "score": 5,
+      "justification": "The dialogue stays entirely on the Storage/Pricing merger decision, references only the listed participants, and addresses only the regulatory compliance question from the brief."
+    },
+    "conversational_coherence": {
+      "score": 5,
+      "justification": "Turns progress logically from Danny's question to Drew's substantive answer to Danny's decision to proceed, with Drew's follow-up offer appropriately acknowledged as the conversation closes."
+    },
+    "naturalness": {
+      "score": 5,
+      "justification": "The exchange reads as plausible internal organisational correspondence with appropriate professional tone, realistic back-and-forth, and no robotic templating or exaggerated formality."
+    }
+  },
+  "turn_flags": [],
+  "overall_summary": "This is a clean, well-executed dialogue that accurately reflects both personas and stays tightly focused on the regulatory compliance question central to the merger decision. Drew provides substantive legal analysis grounded in specific regulatory concerns (FERC, NNG, TW), while Danny responds in his characteristic direct manner and reaches a clear conclusion. No observable issues across any dimension."
+}

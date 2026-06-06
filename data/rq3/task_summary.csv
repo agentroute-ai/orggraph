@@ -1,0 +1,17 @@
+subset,condition,n,mean_f1,mean_recall_at_10,mean_latency_ms,fallback_rate
+overall,R1,149,0.486,0.409,66447,0.00
+overall,R2,149,0.481,0.396,96848,0.99
+relational_temporal,R1,99,0.462,0.374,70637,0.00
+relational_temporal,R2,99,0.459,0.354,120416,0.98
+factual,R1,50,0.533,0.480,58151,0.00
+factual,R2,50,0.525,0.480,50182,1.00
+relational,R1,49,0.387,0.367,71783,0.00
+relational,R2,49,0.437,0.327,128280,0.96
+temporal,R1,50,0.535,0.380,69513,0.00
+temporal,R2,50,0.480,0.380,112710,1.00
+executive,R1,0,0.000,0.000,0,0.00
+executive,R2,0,0.000,0.000,0,0.00
+manager,R1,0,0.000,0.000,0,0.00
+manager,R2,0,0.000,0.000,0,0.00
+ic,R1,149,0.486,0.409,66447,0.00
+ic,R2,149,0.481,0.396,96848,0.99

@@ -1,0 +1,35 @@
+{
+  "scenario_name": "membership_rapp_ets_transition",
+  "condition": "multi_agent",
+  "mean_score": 4.8,
+  "scores": {
+    "speaker_consistency": {
+      "score": 5,
+      "justification": "Each turn is correctly attributed to Drew Fossum or Bill Rapp, with Drew consistently signing off as 'df' and Bill signing as 'Bill', maintaining clear speaker identity throughout."
+    },
+    "persona_fidelity": {
+      "score": 5,
+      "justification": "Drew exhibits direct, action-oriented leadership with appropriate legal terminology and clear deadline-setting; Bill demonstrates concise, professional analysis with substantive input on the contract dispute's pipeline implications."
+    },
+    "scenario_grounding": {
+      "score": 5,
+      "justification": "All turns stay on the topic of the three in-flight EES matters and their ownership transfer, referencing only the listed participants and appropriate anonymized EES contacts."
+    },
+    "conversational_coherence": {
+      "score": 5,
+      "justification": "The dialogue progresses logically from Drew's initial proposal to Bill's confirmation and nuanced recommendation, to Drew's agreement and escalation protocol, with commitments consistently referenced across turns."
+    },
+    "naturalness": {
+      "score": 4,
+      "justification": "The correspondence reads as plausible organizational email exchange with appropriate formality and legal vocabulary; Turn 5's 'END' marker is the only notable anomaly, reading as a transcript artifact rather than natural correspondence."
+    }
+  },
+  "turn_flags": [
+    {
+      "turn_id": 5,
+      "issue": "disfluency",
+      "detail": "Turn contains only 'END' marker, which reads as a transcript artifact rather than natural correspondence from Bill Rapp."
+    }
+  ],
+  "overall_summary": "The dialogue demonstrates strong fidelity to both personas and scenario requirements, with Drew Fossum providing direct leadership on the matter handoff and Bill Rapp offering substantive legal analysis on the contract interpretation dispute's pipeline implications. The exchange is coherent and professionally natural, with the only notable issue being Turn 5's 'END' marker, which appears to be a formatting artifact rather than intended email content."
+}

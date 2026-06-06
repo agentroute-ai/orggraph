@@ -1,0 +1,50 @@
+{
+  "scenario_name": "activity_capacity_revisions",
+  "condition": "multi_agent_tools",
+  "mean_score": 2.6,
+  "scores": {
+    "speaker_consistency": {
+      "score": 2,
+      "justification": "Turn 0 contains explicit meta-commentary ('Actually, wait \u2014 I should probably be a bit more specific here') that reads as self-narrating thought process rather than authored email, breaking the illusion of real correspondence."
+    },
+    "persona_fidelity": {
+      "score": 3,
+      "justification": "Sandra's casual directness and Michelle's structured operational tone are generally well-matched, but Turn 0's meta-commentary and the repeated naming of Shelley Corman and Kevin Hyatt as collaborators feels more like narrating the scenario than authentic persona-driven communication."
+    },
+    "scenario_grounding": {
+      "score": 2,
+      "justification": "The dialogue stays on Transwestern CA capacity topic, but repeatedly introduces Shelley Corman and Kevin Hyatt as active collaborators despite only Sandra Brawner and Michelle Lokay being listed as participants in the brief."
+    },
+    "conversational_coherence": {
+      "score": 4,
+      "justification": "Turns progress logically with consistent commitments (Wednesday 21st deadline, deal IDs to follow, Shelley as second set of eyes), with no contradictions or non-sequiturs across the exchange."
+    },
+    "naturalness": {
+      "score": 2,
+      "justification": "Turn 0's self-interrupting meta-commentary about who to address and how to tighten the message reads as a draft or role-play instruction rather than plausible organizational correspondence, undermining the dialogue's authenticity."
+    }
+  },
+  "turn_flags": [
+    {
+      "turn_id": 0,
+      "issue": "disfluency",
+      "detail": "Explicit meta-commentary ('Actually, wait \u2014 I should probably be a bit more specific here') reads as self-narrating thought process rather than authored email text."
+    },
+    {
+      "turn_id": 0,
+      "issue": "hallucination",
+      "detail": "Turn contains extensive narration about who should be looped in (Shelley Corman, Chris Germany, Danny McCarty, Kevin Hyatt) rather than addressing them directly in the email."
+    },
+    {
+      "turn_id": 1,
+      "issue": "hallucination",
+      "detail": "Introduces Kevin Hyatt as active collaborator and Shelley Corman as second set of eyes, neither listed as participants in the brief."
+    },
+    {
+      "turn_id": 3,
+      "issue": "hallucination",
+      "detail": "Again references Kevin Hyatt pulling numbers and Shelley Corman reviewing as second set of eyes, adding attendees not in the brief."
+    }
+  ],
+  "overall_summary": "The dialogue demonstrates coherent operational exchange between two Enron professionals coordinating a capacity snapshot for the November 25 review cycle, with appropriate professional tone and logical information flow. However, Turn 0's explicit meta-commentary about how to write the email and repeated introduction of unlisted participants (Kevin Hyatt, Shelley Corman) as active collaborators significantly undermine the scenario grounding and naturalness, making the exchange read as a constructed scenario rather than plausible organizational correspondence."
+}

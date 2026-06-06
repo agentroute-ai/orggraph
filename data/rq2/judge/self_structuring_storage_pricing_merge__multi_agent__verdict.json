@@ -1,0 +1,29 @@
+{
+  "scenario_name": "self_structuring_storage_pricing_merge",
+  "condition": "multi_agent",
+  "mean_score": 5.0,
+  "scores": {
+    "speaker_consistency": {
+      "score": 5,
+      "justification": "Both Danny and Drew maintain consistent voices throughout; Danny signs off as 'Dan' and Drew as 'df', both consistent with their given names, with no self-referential name usage or identity confusion."
+    },
+    "persona_fidelity": {
+      "score": 5,
+      "justification": "Danny writes in a direct, concise manner with minimal hedging and casual sign-offs; Drew provides formal legal analysis (FERC obligations, tariff compliance) while using casual phrasing ('Short answer', 'Happy to discuss further'), matching both personas' described styles and expertise."
+    },
+    "scenario_grounding": {
+      "score": 5,
+      "justification": "The dialogue remains focused on the Storage/Pricing merger decision and regulatory compliance implications; only Danny and Drew are referenced, and all content relates directly to the brief's specified topic and participants."
+    },
+    "conversational_coherence": {
+      "score": 5,
+      "justification": "Turns follow logically: Danny requests regulatory input, Drew provides analysis with caveats, Danny acknowledges and confirms next steps incorporating Drew's points, Drew offers ongoing support, and Danny closes the thread."
+    },
+    "naturalness": {
+      "score": 5,
+      "justification": "The exchange reads as plausible organizational correspondence with appropriate email conventions, measured formality, and natural back-and-forth pacing without robotic templating or repetitive structures."
+    }
+  },
+  "turn_flags": [],
+  "overall_summary": "This dialogue demonstrates strong fidelity to both personas and scenario parameters, with Drew providing substantive legal analysis on FERC regulatory implications while Danny maintains his direct, action-oriented communication style. The exchange is tightly focused on the merger decision, logically structured, and reads as authentic organizational correspondence between senior peers."
+}

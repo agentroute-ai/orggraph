@@ -1,0 +1,29 @@
+{
+  "scenario_name": "activity_capacity_revisions",
+  "condition": "multi_agent",
+  "mean_score": 5.0,
+  "scores": {
+    "speaker_consistency": {
+      "score": 5,
+      "justification": "Each turn is clearly attributable to its named speaker; Sandra's casual directness and Michelle's structured professionalism remain consistent across all six turns with no name confusion or self-addressing errors."
+    },
+    "persona_fidelity": {
+      "score": 5,
+      "justification": "Sandra's formality 2/5 is evident in her breezy 'Hey team' opener and 'no rush on the fancy formatting' remark, while Michelle's formality 3/5 shows in her structured capacity report format and professional sign-offs, both matching their described roles and expertise vocabulary."
+    },
+    "scenario_grounding": {
+      "score": 5,
+      "justification": "The dialogue stays tightly on-topic with only the two listed participants, correctly referencing Transwestern Pipeline (TW), California capacity, deal IDs, delivery points (Topock/Ehrenberg), volumes (10,000 MMBtu/d), and the November 25 commercial review cutoff from the brief."
+    },
+    "conversational_coherence": {
+      "score": 5,
+      "justification": "The exchange follows a logical request-response-confirmation arc: Sandra requests capacity checks, Michelle asks for specifics, Sandra provides deal IDs and parameters, Michelle returns capacity figures clearing both deals, and both parties confirm readiness for the November 25 review."
+    },
+    "naturalness": {
+      "score": 5,
+      "justification": "The dialogue reads as plausible internal organisational correspondence with varied sentence structures, appropriate informality from Sandra balanced against Michelle's operational precision, and natural sign-offs that avoid robotic templating or exaggerated formality."
+    }
+  },
+  "turn_flags": [],
+  "overall_summary": "This dialogue represents a near-ideal execution of the brief, with both Sandra Brawner's casual trading-desk persona and Michelle Lokay's structured operations-analyst persona maintaining strong fidelity across all turns. The scenario is tightly grounded in the November 2001 Enron North America context with accurate technical references, and the conversational arc progresses logically from initial capacity request through detailed confirmation to final readiness acknowledgment."
+}

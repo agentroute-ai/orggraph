@@ -1,0 +1,35 @@
+{
+  "scenario_name": "activity_coordination_q4_review",
+  "condition": "multi_agent",
+  "mean_score": 4.2,
+  "scores": {
+    "speaker_consistency": {
+      "score": 4,
+      "justification": "All turns are signed correctly and read as authored by the named participants; the abrupt 'END' in turn 3 is unusual but not a speaker-confusion violation."
+    },
+    "persona_fidelity": {
+      "score": 4,
+      "justification": "Sara's task-focused, moderately polite tone and Louise's concise directness align with their personas; the brevity is appropriate for scheduling correspondence."
+    },
+    "scenario_grounding": {
+      "score": 5,
+      "justification": "The dialogue stays on topic\u2014Q4 confirmations review, three-week backlog, regulatory uncertainty, Friday deadline\u2014and involves only the listed participants."
+    },
+    "conversational_coherence": {
+      "score": 4,
+      "justification": "The scheduling exchange follows logically from request to availability to confirmation; the 'END' is abrupt but does not contradict prior commitments."
+    },
+    "naturalness": {
+      "score": 4,
+      "justification": "The correspondence reads as plausible internal email, though the abrupt 'END' in turn 3 is a minor unnatural note in an otherwise straightforward thread."
+    }
+  },
+  "turn_flags": [
+    {
+      "turn_id": 3,
+      "issue": "disfluency",
+      "detail": "Single-word 'END' response is abrupt and ambiguous; unclear if intentional termination or abrupt sign-off."
+    }
+  ],
+  "overall_summary": "The dialogue demonstrates strong persona fidelity and scenario grounding, with both Sara and Louise writing in character\u2014Sara's task-focused professionalism and Louise's terse directness are well-maintained. The scheduling exchange is coherent and stays tightly on-topic, though the abrupt 'END' in the final turn is a minor naturalness issue that reads as an unusually curt conclusion to an otherwise plausible email thread."
+}

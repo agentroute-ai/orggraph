@@ -1,0 +1,29 @@
+{
+  "scenario_name": "self_structuring_storage_pricing_merge",
+  "condition": "single_llm",
+  "mean_score": 5.0,
+  "scores": {
+    "speaker_consistency": {
+      "score": 5,
+      "justification": "Each turn clearly identifies the correct sender (Danny McCarty or Drew Fossum) with no self-referential name confusion or ambiguous attribution."
+    },
+    "persona_fidelity": {
+      "score": 5,
+      "justification": "Danny writes in a direct, concise manner with minimal hedging and casual sign-offs ('Dan'); Drew provides direct legal analysis with practical risk framing and brief sign-off ('df')."
+    },
+    "scenario_grounding": {
+      "score": 5,
+      "justification": "All turns stay on the Storage/Pricing merger topic, referencing only the listed participants and relevant regulatory concerns (FERC obligations, tariff responsibilities, capacity release compliance)."
+    },
+    "conversational_coherence": {
+      "score": 5,
+      "justification": "Turns progress logically from Danny's question to Drew's regulatory assessment to Danny's follow-up request, with commitments (one-pager, draft structure review) referenced consistently."
+    },
+    "naturalness": {
+      "score": 5,
+      "justification": "The dialogue reads as plausible organizational correspondence with appropriate professional tone, natural sentence variation, and realistic sign-offs without robotic templating or exaggerated formality."
+    }
+  },
+  "turn_flags": [],
+  "overall_summary": "The dialogue demonstrates strong fidelity to both personas and scenario constraints, with Drew providing substantive regulatory analysis that informs Danny's decision-making process. The exchange is coherent, stays tightly on-topic regarding the Storage/Pricing merger and FERC compliance implications, and maintains a natural professional register throughout. No observable issues across any dimension."
+}

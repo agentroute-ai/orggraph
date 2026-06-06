@@ -1,0 +1,40 @@
+{
+  "scenario_name": "positioning_ferc_california_inquiry",
+  "condition": "multi_agent_tools",
+  "mean_score": 4.0,
+  "scores": {
+    "speaker_consistency": {
+      "score": 3,
+      "justification": "Turns 0-4 are consistent with their respective personas, but Turn 5 ('END') is a system marker rather than authored text from Mary C. Hain, breaking the speaker pattern."
+    },
+    "persona_fidelity": {
+      "score": 4,
+      "justification": "Steffes writes with moderate verbosity and strategic coordination; Hain sends action-oriented confirmations with clear requests, both matching their personas well except Turn 5."
+    },
+    "scenario_grounding": {
+      "score": 5,
+      "justification": "All turns stay on the FERC procedural response coordination, correctly reference the December 15 deadline, mid-November timing, and only mention listed participants (Steffes, Hain, Sanders, Dasovich, Shapiro, Fossum)."
+    },
+    "conversational_coherence": {
+      "score": 4,
+      "justification": "Turns build logically on each other with Steffes proposing, Hain flagging issues, Steffes revising, and both confirming alignment, though Turn 5 is a non-conversational marker."
+    },
+    "naturalness": {
+      "score": 4,
+      "justification": "The dialogue reads as plausible organizational correspondence with appropriate formality and natural back-and-forth, but Turn 5 ('END') is a robotic system marker that breaks immersion."
+    }
+  },
+  "turn_flags": [
+    {
+      "turn_id": 5,
+      "issue": "speaker_confusion",
+      "detail": "Turn 5 'END' is a system marker, not authored text from Mary C. Hain's persona."
+    },
+    {
+      "turn_id": 5,
+      "issue": "disfluency",
+      "detail": "Single-word marker 'END' is not natural organizational correspondence and reads as a dialogue termination signal."
+    }
+  ],
+  "overall_summary": "The dialogue demonstrates strong scenario grounding and conversational coherence, with Steffes and Hain exchanging substantive updates on FERC response ownership and timeline that reflect their professional roles. The primary issue is Turn 5's 'END' marker, which is a system indicator rather than persona-authored text, breaking speaker consistency and naturalness. Otherwise, the correspondence is plausible mid-2000s regulatory coordination between senior Enron executives."
+}

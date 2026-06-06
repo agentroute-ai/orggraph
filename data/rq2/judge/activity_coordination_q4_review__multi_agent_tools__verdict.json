@@ -1,0 +1,35 @@
+{
+  "scenario_name": "activity_coordination_q4_review",
+  "condition": "multi_agent_tools",
+  "mean_score": 4.4,
+  "scores": {
+    "speaker_consistency": {
+      "score": 4,
+      "justification": "All turns are attributed to the correct listed participants with appropriate signature conventions, though Turn 3's 'END' is an unusual closing that doesn't contradict Louise's authorship."
+    },
+    "persona_fidelity": {
+      "score": 4,
+      "justification": "Sara's task-focused, formal scheduling emails and Louise's concise direct responses align with their personas; the brevity of Turn 3 is consistent with Louise's style but leans toward the extreme."
+    },
+    "scenario_grounding": {
+      "score": 5,
+      "justification": "The dialogue stays tightly on the Q4 confirmations backlog, Thursday meeting scheduling, Friday risk committee deadline, and West Coast basis items\u2014all referenced in the brief without hallucinated attendees or off-topic content."
+    },
+    "conversational_coherence": {
+      "score": 5,
+      "justification": "Turns build logically: Sara schedules the meeting, Louise confirms attendance and adds an agenda item, Sara acknowledges and commits to coordination, Louise closes the thread without contradiction."
+    },
+    "naturalness": {
+      "score": 4,
+      "justification": "The exchange reads as plausible internal correspondence with appropriate email conventions, though Turn 3's solitary 'END' reads as a technical artifact rather than organic professional sign-off."
+    }
+  },
+  "turn_flags": [
+    {
+      "turn_id": 3,
+      "issue": "disfluency",
+      "detail": "Single-word 'END' reads as a transmission marker rather than natural correspondence."
+    }
+  ],
+  "overall_summary": "The dialogue demonstrates strong scenario grounding and conversational coherence, with both Sara and Louise operating consistently within their documented roles and styles. The primary notable issue is Turn 3's abrupt 'END' marker, which undermines naturalness despite being technically consistent with Louise's direct communication style."
+}

@@ -1,0 +1,35 @@
+{
+  "scenario_name": "activity_coordination_q4_review",
+  "condition": "single_llm",
+  "mean_score": 4.4,
+  "scores": {
+    "speaker_consistency": {
+      "score": 4,
+      "justification": "All turns are attributed to the correct listed participants with appropriate signatures and no self-referential confusion."
+    },
+    "persona_fidelity": {
+      "score": 4,
+      "justification": "Sara's task-focused, concise emails and Louise's short, direct responses align with their persona descriptions, though Turn 3's abrupt 'END' is atypical."
+    },
+    "scenario_grounding": {
+      "score": 5,
+      "justification": "The dialogue stays entirely on topic\u2014Q4 confirmations review, three-week backlog, regulatory uncertainty, Friday risk committee\u2014and references only the listed participants plus Jeff."
+    },
+    "conversational_coherence": {
+      "score": 5,
+      "justification": "Turns follow logically: scheduling request, availability confirmation with attendee note, explicit confirmation and action items, and acknowledgment."
+    },
+    "naturalness": {
+      "score": 4,
+      "justification": "The exchange reads as plausible organisational correspondence with appropriate brevity, though Turn 3's solitary 'END' reads as a terminal marker rather than natural email prose."
+    }
+  },
+  "turn_flags": [
+    {
+      "turn_id": 3,
+      "issue": "disfluency",
+      "detail": "Single-word 'END' marker is abrupt and reads as a terminal signal rather than natural correspondence."
+    }
+  ],
+  "overall_summary": "The dialogue demonstrates strong fidelity to the scenario and participants, with coherent task progression from scheduling request through confirmation and agenda distribution. Sara's professional, documentation-focused voice and Louise's concise executive style are well-maintained throughout. The primary deviation is Turn 3's abrupt 'END' marker, which, while not incorrect, lacks the natural conversational quality expected in organisational email exchanges."
+}

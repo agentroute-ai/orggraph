@@ -1,0 +1,35 @@
+{
+  "scenario_name": "positioning_ferc_california_inquiry",
+  "condition": "single_llm",
+  "mean_score": 4.6,
+  "scores": {
+    "speaker_consistency": {
+      "score": 5,
+      "justification": "All turns are signed with the correct names (Jim/James Steffes, Mary/Mary C. Hain) and no self-addressing or speaker confusion is present."
+    },
+    "persona_fidelity": {
+      "score": 5,
+      "justification": "James's turns are moderately verbose and strategically coordinating; Mary's turns are action-oriented with clear requests and review coordination, both matching their persona descriptions."
+    },
+    "scenario_grounding": {
+      "score": 4,
+      "justification": "The dialogue stays tightly on FERC inquiry response coordination, but references Jeff Dasovich and Paul Kaufman who are not listed participants, warranting a minor deduction."
+    },
+    "conversational_coherence": {
+      "score": 5,
+      "justification": "Turns logically progress from initial proposal through confirmation, with boundary items, legal privilege, and review schedule commitments consistently referenced across turns."
+    },
+    "naturalness": {
+      "score": 4,
+      "justification": "The correspondence reads as plausible organizational email, but Turn 5's 'END' marker is an artificial meta-communication device that breaks naturalness."
+    }
+  },
+  "turn_flags": [
+    {
+      "turn_id": 5,
+      "issue": "disfluency",
+      "detail": "Turn ends with 'END' marker, an artificial meta-communication device not found in real organizational correspondence."
+    }
+  ],
+  "overall_summary": "The dialogue demonstrates strong persona fidelity and conversational coherence, with James Steffes and Mary C. Hain each maintaining their distinct professional voices throughout a logically progressing coordination exchange. The primary weakness is Turn 5's 'END' marker, which is a disfluency that breaks the natural email format established in prior turns."
+}

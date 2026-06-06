@@ -1,0 +1,29 @@
+{
+  "scenario_name": "membership_rapp_ets_transition",
+  "condition": "single_llm",
+  "mean_score": 5.0,
+  "scores": {
+    "speaker_consistency": {
+      "score": 5,
+      "justification": "All turns are authored by the correct speakers with appropriate sign-offs ('df' for Drew, 'BR' for Bill), and no self-addressing or name confusion occurs."
+    },
+    "persona_fidelity": {
+      "score": 5,
+      "justification": "Drew's direct, action-oriented style with casual sign-offs matches his persona; Bill's concise, structured professional summaries with clear recommendations align with his role as gas pipeline legal counsel."
+    },
+    "scenario_grounding": {
+      "score": 5,
+      "justification": "The dialogue stays entirely on the EES-to-ETS transition topic, references only Drew and Bill (with Janet Lacy appropriately mentioned as a third-party contact), and discusses only the three in-flight regulatory matters specified in the brief."
+    },
+    "conversational_coherence": {
+      "score": 5,
+      "justification": "The exchange follows a logical request-response-acknowledgment pattern; Drew's questions are answered directly, recommendations are agreed upon in sequence, and commitments (contacting Janet, sending confirmation) are referenced consistently."
+    },
+    "naturalness": {
+      "score": 5,
+      "justification": "The dialogue reads as plausible late-2001 organizational correspondence with appropriate formality, natural sign-offs, and efficient legal-professional communication without robotic templating or exaggerated structure."
+    }
+  },
+  "turn_flags": [],
+  "overall_summary": "The dialogue demonstrates strong fidelity to both personas and scenario requirements, with Drew Fossum providing direct, action-oriented guidance and Bill Rapp delivering concise, professionally structured regulatory matter summaries. The conversation maintains logical coherence throughout its request-response-acknowledgment flow, with appropriate references to FERC, EES, ETS, and the three in-flight matters. No observable issues across any dimension\u2014the exchange reads as authentic organizational correspondence between senior legal professionals managing a departmental transition."
+}

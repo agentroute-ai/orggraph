@@ -1,0 +1,35 @@
+{
+  "scenario_name": "membership_rapp_ets_transition",
+  "condition": "multi_agent_tools",
+  "mean_score": 3.4,
+  "scores": {
+    "speaker_consistency": {
+      "score": 4,
+      "justification": "All turns are signed and attributed correctly; no speaker confusion or self-addressing observed."
+    },
+    "persona_fidelity": {
+      "score": 4,
+      "justification": "Drew's turns are direct and action-oriented; Bill's turns are concise and professionally structured, matching their described styles."
+    },
+    "scenario_grounding": {
+      "score": 2,
+      "justification": "Turn 1 introduces Mary Kay Miller as a named colleague with attributed actions (forwarding an order), but she is not listed among the scenario participants, constituting a hallucinated attendee."
+    },
+    "conversational_coherence": {
+      "score": 4,
+      "justification": "The dialogue progresses logically from scope confirmation to new regulatory matters to next steps, with commitments (EES file review, handoff memo) referenced consistently."
+    },
+    "naturalness": {
+      "score": 3,
+      "justification": "The dialogue reads as plausible organizational correspondence overall, but Turn 1's specific attribution of the Columbia Gulf order to an unlisted colleague reads as constructed rather than organic."
+    }
+  },
+  "turn_flags": [
+    {
+      "turn_id": 1,
+      "issue": "hallucination",
+      "detail": "Mary Kay Miller is referenced as a named colleague forwarding an order, but she is not listed among the scenario participants."
+    }
+  ],
+  "overall_summary": "The dialogue demonstrates strong speaker consistency and persona fidelity, with both Drew and Bill writing in character as senior legal executive and gas pipeline counsel respectively. The primary flaw is a hallucination in Turn 1 where Bill references Mary Kay Miller as a known colleague with attributed actions, violating the constraint that only listed participants may appear. The conversation otherwise maintains good coherence and plausible professional tone, resolving the core question of Bill's ETS responsibilities while introducing relevant regulatory matters for follow-up."
+}
