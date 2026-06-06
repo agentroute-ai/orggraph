@@ -212,16 +212,17 @@ with tab_kg:
         st.warning("Need `data/kg_backbone.graphml`.")
     else:
         G = _load_kg_graph(str(kg_path))
-        NTYPES = ["Person", "Team", "ExternalEntity", "Function"]
-        ETYPES = ["REPORTS_TO", "MEMBER_OF", "COMMUNICATES_WITH"]
-        COLOR = {"Person": "#16a34a", "Team": "#9333ea",
-                 "ExternalEntity": "#2b6cb0", "Function": "#f59e0b"}
+        NTYPES = ["Person", "Team", "Project", "ExternalEntity", "Function"]
+        ETYPES = ["REPORTS_TO", "MEMBER_OF", "WORKS_ON", "COMMUNICATES_WITH"]
+        COLOR = {"Person": "#16a34a", "Team": "#9333ea", "Project": "#ea580c",
+                 "ExternalEntity": "#2b6cb0", "Function": "#eab308"}
         EDGE_COLOR = {"REPORTS_TO": "#dc2626", "MEMBER_OF": "#0ea5e9",
-                      "COMMUNICATES_WITH": "#94a3b8"}
+                      "WORKS_ON": "#ca8a04", "COMMUNICATES_WITH": "#94a3b8"}
 
         cc = st.columns([2, 2, 1])
-        sel_n = cc[0].multiselect("Node types", NTYPES, default=["Person", "Team", "Function"])
-        sel_e = cc[1].multiselect("Edge types", ETYPES, default=["REPORTS_TO", "MEMBER_OF"])
+        sel_n = cc[0].multiselect("Node types", NTYPES, default=["Person", "Team", "Project"])
+        sel_e = cc[1].multiselect("Edge types", ETYPES,
+                                  default=["REPORTS_TO", "MEMBER_OF", "WORKS_ON"])
         cap = cc[2].slider("Max nodes", 20, G.number_of_nodes(),
                            min(60, G.number_of_nodes()), step=10)
 
@@ -259,8 +260,8 @@ with tab_kg:
                 from pyvis.network import Network
 
                 # Darker borders per node type, Neo4j-style.
-                BORDER = {"Person": "#0f7a37", "Team": "#6b21a8",
-                          "ExternalEntity": "#1e4e8c", "Function": "#b45309"}
+                BORDER = {"Person": "#0f7a37", "Team": "#6b21a8", "Project": "#c2410c",
+                          "ExternalEntity": "#1e4e8c", "Function": "#a16207"}
 
                 net = Network(height="640px", width="100%", directed=True,
                               bgcolor="#ffffff", cdn_resources="in_line")
