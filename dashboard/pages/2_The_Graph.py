@@ -1,6 +1,9 @@
 """The Graph: supporting visualizations - network, topics, hierarchy."""
 from __future__ import annotations
 
+from pathlib import Path
+
+import networkx as nx
 import numpy as np
 import pandas as pd
 import plotly.express as px
@@ -23,7 +26,14 @@ render_header(
 )
 
 
-tab_net, tab_topics, tab_hier = st.tabs(["Network", "Topics & Projects", "Hierarchy"])
+@st.cache_resource(show_spinner=False)
+def _load_kg_graph(path: str):
+    return nx.read_graphml(path)
+
+
+tab_net, tab_topics, tab_hier, tab_kg = st.tabs(
+    ["Network", "Topics & Projects", "Hierarchy", "Knowledge graph"]
+)
 
 
 with tab_net:
@@ -190,3 +200,70 @@ with tab_hier:
                     f"tier {int(row.get('tier', 0))}, "
                     f"score {row.get(score_col, 0):.3f}"
                 )
+
+with tab_kg:
+    st.caption(
+        "Interactive preview of the organizational knowledge graph - a static export of "
+        "the Neo4j graph, no live database. Email and topic nodes are left out to keep it "
+        "readable. Drag nodes to explore; hover for details."
+    )
+    kg_path = Path(__file__).resolve().parents[2] / "data" / "kg_backbone.graphml"
+    if not kg_path.is_file():
+        st.warning("Need `data/kg_backbone.graphml`.")
+    else:
+        G = _load_kg_graph(str(kg_path))
+        NTYPES = ["Person", "Team", "ExternalEntity", "Function"]
+        ETYPES = ["REPORTS_TO", "MEMBER_OF", "COMMUNICATES_WITH"]
+        COLOR = {"Person": "#16a34a", "Team": "#9333ea",
+                 "ExternalEntity": "#2b6cb0", "Function": "#f59e0b"}
+
+        cc = st.columns([2, 2, 1])
+        sel_n = cc[0].multiselect("Node types", NTYPES, default=["Person", "Team", "Function"])
+        sel_e = cc[1].multiselect("Edge types", ETYPES, default=["REPORTS_TO", "MEMBER_OF"])
+        cap = cc[2].slider("Max nodes", 40, G.number_of_nodes(),
+                           min(160, G.number_of_nodes()), step=20)
+
+        H = nx.DiGraph()
+        for n, d in G.nodes(data=True):
+            if d.get("ntype") in sel_n:
+                H.add_node(n, **d)
+        for u, v, d in G.edges(data=True):
+            if d.get("etype") in sel_e and u in H and v in H:
+                H.add_edge(u, v, **d)
+        H.remove_nodes_from([n for n in list(H.nodes()) if H.degree(n) == 0])
+        if H.number_of_nodes() > cap:
+            keep = sorted(H.nodes(), key=lambda x: H.degree(x), reverse=True)[:cap]
+            H = H.subgraph(keep).copy()
+
+        if H.number_of_nodes() == 0:
+            st.info("No nodes match the current filters.")
+        else:
+            legend = "  ".join(
+                f"<span style='color:{COLOR[t]};font-size:18px'>●</span> {t}"
+                for t in sel_n if t in COLOR
+            )
+            st.markdown(
+                f"**{H.number_of_nodes()}** nodes · **{H.number_of_edges()}** "
+                f"relationships &nbsp;&nbsp; {legend}", unsafe_allow_html=True,
+            )
+            try:
+                import streamlit.components.v1 as components
+                from pyvis.network import Network
+
+                net = Network(height="600px", width="100%", directed=True,
+                              bgcolor="#ffffff", font_color="#0b1220",
+                              cdn_resources="in_line")
+                net.barnes_hut(spring_length=120)
+                for n, d in H.nodes(data=True):
+                    nt = d.get("ntype", "?")
+                    tip = f"{d.get('name', '?')} ({nt})"
+                    if d.get("title"):
+                        tip += f" - {d['title']}"
+                    net.add_node(n, label=d.get("name", "?"), title=tip,
+                                 color=COLOR.get(nt, "#9ca3af"),
+                                 size=10 + 1.4 * H.degree(n), shape="dot")
+                for u, v, d in H.edges(data=True):
+                    net.add_edge(u, v, title=d.get("etype", ""), color="#cbd5e1")
+                components.html(net.generate_html(notebook=False), height=620, scrolling=True)
+            except Exception as exc:  # noqa: BLE001
+                st.error(f"Could not render the graph: {exc}")
