@@ -31,8 +31,8 @@ def _load_kg_graph(path: str):
     return nx.read_graphml(path)
 
 
-tab_net, tab_topics, tab_hier, tab_kg = st.tabs(
-    ["Network", "Topics & Projects", "Hierarchy", "Knowledge graph"]
+tab_kg, tab_net, tab_topics, tab_hier = st.tabs(
+    ["Knowledge graph", "Network", "Topics & Projects", "Hierarchy"]
 )
 
 
