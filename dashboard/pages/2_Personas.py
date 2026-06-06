@@ -146,11 +146,19 @@ default_pool = hier.sort_values("composite_score", ascending=False)["node"].toli
 st.sidebar.subheader("Filter")
 restrict = st.sidebar.radio(
     "Show personas for",
-    ["Ground-truth labeled", "All extracted nodes"],
+    ["All extracted nodes", "Ground-truth labeled"],
     index=0,
 )
-if restrict == "Ground-truth labeled" and not gt.empty:
-    pool = [n for n in default_pool if n in set(gt["name"])]
+if restrict == "Ground-truth labeled":
+    # Prefer the 103-person ground truth v2; fall back to the 30-person legacy set.
+    gt_v2_path = PROCESSED / "employees_ground_truth_v2.csv"
+    if gt_v2_path.is_file():
+        gt_names = set(pd.read_csv(gt_v2_path)["name"])
+    elif not gt.empty:
+        gt_names = set(gt["name"])
+    else:
+        gt_names = set()
+    pool = [n for n in default_pool if n in gt_names]
 else:
     pool = default_pool
 
