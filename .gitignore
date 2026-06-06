@@ -25,8 +25,8 @@ litellm-config.yaml
 datasets/enron/maildir/
 datasets/enron/raw/
 datasets/enron/processed/clean_emails.parquet
-datasets/enron/processed/umap_embeddings.npy
 datasets/enron/processed/*.npy
+!datasets/enron/processed/umap_embeddings.npy
 datasets/enron/**/*.mbox
 
 # Local pipeline runtime artifacts
