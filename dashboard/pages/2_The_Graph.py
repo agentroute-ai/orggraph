@@ -233,14 +233,25 @@ with tab_kg:
         for u, v, d in G.edges(data=True):
             if d.get("etype") in sel_e and u in H and v in H:
                 H.add_edge(u, v, **d)
-        H.remove_nodes_from([n for n in list(H.nodes()) if H.degree(n) == 0])
+        # Prefer the connected subgraph (declutters), but if nothing connects
+        # under the current edge filter keep the nodes so the selection still
+        # shows - e.g. Projects only link to People via WORKS_ON.
+        connected = [n for n in H.nodes() if H.degree(n) > 0]
+        if connected:
+            H = H.subgraph(connected).copy()
         if H.number_of_nodes() > cap:
             keep = sorted(H.nodes(), key=lambda x: H.degree(x), reverse=True)[:cap]
             H = H.subgraph(keep).copy()
 
         if H.number_of_nodes() == 0:
-            st.info("No nodes match the current filters.")
+            st.info("No nodes match the current filters. Select at least one node type.")
         else:
+            if H.number_of_edges() == 0:
+                st.caption(
+                    "These nodes have no relationships under the current edge filter. "
+                    "Tip: Projects link to People via WORKS_ON, and Teams via MEMBER_OF, "
+                    "so add the matching node and edge types to see the links."
+                )
             legend = "  ".join(
                 f"<span style='color:{COLOR[t]};font-size:18px'>●</span> {t}"
                 for t in sel_n if t in COLOR
